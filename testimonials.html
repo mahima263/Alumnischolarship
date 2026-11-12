@@ -35,7 +35,7 @@ tailwind.config = {
 </script>
 <style>
   :root { box-sizing: border-box; padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px); }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 104px; }
   body { background:#F7F1E8; color:#4A3A33; -webkit-font-smoothing:antialiased; }
   .font-display { letter-spacing:-.01em; }
   .btn-primary { background:#A83E24; color:#fff; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
@@ -587,7 +587,8 @@ border: none; }
   .faqs .h-sec { font-family:'Lato', sans-serif !important; font-size:1.875rem !important; }
   @media (min-width:768px) { .faqs .h-sec { font-size:2.4rem !important; } }
   .logo-img { filter:none; }
-  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.75), rgba(42,23,16,0)); }
+  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.88), rgba(42,23,16,.55) 60%, rgba(42,23,16,0)); padding-bottom:18px; }
+  #nav.nav-scrolled { padding-bottom:0; }
   #nav.nav-scrolled { background: rgba(42,23,16,.96); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -18px rgba(0,0,0,.6); }
   #nav nav a { color:#fff; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
   .footer-art { opacity:.3; -webkit-mask-image:linear-gradient(to right, transparent, #000 30%); mask-image:linear-gradient(to right, transparent, #000 30%); }
@@ -685,14 +686,14 @@ border: none; }
 
 <!-- ============ NAV ============ -->
 <header id="nav" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
-  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-[72px] flex items-center justify-between">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-20 md:h-[92px] flex items-center justify-between">
     <a href="index.html#top" class="flex items-center gap-3 text-white group">
-      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-12 md:h-[58px] w-auto">
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-[52px] md:h-[64px] w-auto">
     </a>
     <nav class="hidden xl:flex items-center gap-8 text-sm text-white/90">
       <a href="index.html#about" class="nav-link">About the Scholarship</a>
       <a href="index.html#eligibility" class="nav-link">Eligibility &amp; Selection</a>
-      <a href="index.html#stories" class="nav-link">Stories of Change</a>
+      <a href="testimonials.html#donors" class="nav-link">Stories &amp; Voices</a>
       <a href="index.html#ways" class="nav-link">Ways to Contribute</a>
     </nav>
     <div class="flex items-center gap-2.5 sm:gap-3">
@@ -706,7 +707,7 @@ border: none; }
   <div id="mobileMenu" class="xl:hidden hidden bg-cocoa text-white px-6 py-4 space-y-3 text-sm">
     <a href="index.html#about" class="block">About the Scholarship</a>
     <a href="index.html#eligibility" class="block">Eligibility &amp; Selection</a>
-    <a href="index.html#stories" class="block">Stories of Change</a>
+    <a href="testimonials.html#donors" class="block">Stories &amp; Voices</a>
     <a href="index.html#ways" class="block">Ways to Contribute</a>
     <a href="wall-of-donors.html" target="_blank" rel="noopener" class="nav-cta-outline block md:hidden w-full py-3 rounded-xl font-semibold text-center mt-2">Wall of Donors</a>
     <a href="index.html#donate" class="btn-primary block md:hidden w-full py-3 rounded-xl font-semibold mt-2 text-center">Contribute Now</a>
@@ -733,7 +734,7 @@ border: none; }
 
 <!-- ============ TOGGLE + TESTIMONIALS ============ -->
 <main class="bg-cream-100 pb-16 md:pb-24">
-  <div class="sticky top-[78px] z-30 flex justify-center px-4 -translate-y-1/2 pointer-events-none">
+  <div class="sticky top-[116px] md:top-[130px] z-30 flex justify-center px-4 -translate-y-1/2 pointer-events-none">
     <div class="seg-toggle pointer-events-auto" role="tablist" aria-label="Choose testimonials" data-active="recipients" id="segToggle">
       <span class="seg-thumb" aria-hidden="true"></span>
       <button type="button" class="seg-btn" role="tab" id="tab-recipients" aria-controls="panel-recipients" aria-selected="true" data-tab="recipients"><span class="hidden sm:inline">Scholarship </span>Recipients <span class="seg-count">20</span></button>
@@ -1199,7 +1200,7 @@ function show(name, opts = {}) {
   tabs.forEach(t => { const on = t.dataset.tab === name; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
   Object.entries(panels).forEach(([k, p]) => p.hidden = k !== name);
   if (opts.hash) history.replaceState(null, '', '#' + name);
-  if (opts.scroll) { const top = panels[name].getBoundingClientRect().top + window.scrollY - 150; if (window.scrollY > top) window.scrollTo({top, behavior:'auto'}); }
+  if (opts.scroll) { const top = panels[name].getBoundingClientRect().top + window.scrollY - 200; if (window.scrollY > top) window.scrollTo({top, behavior:'auto'}); }
   if (!reduce) {
     const p = panels[name];
     gsap.fromTo(p.querySelector('.text-center'), {y:16, opacity:0}, {y:0, opacity:1, duration:.5, ease:'power3.out', clearProps:'all'});

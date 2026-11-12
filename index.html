@@ -35,7 +35,7 @@ tailwind.config = {
 </script>
 <style>
   :root { box-sizing: border-box; padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px); }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 104px; }
   body { background:#F7F1E8; color:#4A3A33; -webkit-font-smoothing:antialiased; }
   .font-display { letter-spacing:-.01em; }
   .btn-primary { background:#A83E24; color:#fff; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
@@ -587,7 +587,8 @@ border: none; }
   .faqs .h-sec { font-family:'Lato', sans-serif !important; font-size:1.875rem !important; }
   @media (min-width:768px) { .faqs .h-sec { font-size:2.4rem !important; } }
   .logo-img { filter:none; }
-  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.75), rgba(42,23,16,0)); }
+  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.88), rgba(42,23,16,.55) 60%, rgba(42,23,16,0)); padding-bottom:18px; }
+  #nav.nav-scrolled { padding-bottom:0; }
   #nav.nav-scrolled { background: rgba(42,23,16,.96); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -18px rgba(0,0,0,.6); }
   #nav nav a { color:#fff; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
   .footer-art { opacity:.3; -webkit-mask-image:linear-gradient(to right, transparent, #000 30%); mask-image:linear-gradient(to right, transparent, #000 30%); }
@@ -697,14 +698,14 @@ border: none; }
 
 <!-- ============ NAV ============ -->
 <header id="nav" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
-  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-[72px] flex items-center justify-between">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-20 md:h-[92px] flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3 text-white group">
-      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-12 md:h-[58px] w-auto">
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-[52px] md:h-[64px] w-auto">
     </a>
     <nav class="hidden xl:flex items-center gap-8 text-sm text-white/90">
       <a href="#about" class="nav-link">About the Scholarship</a>
       <a href="#eligibility" class="nav-link">Eligibility &amp; Selection</a>
-      <a href="#stories" class="nav-link">Stories of Change</a>
+      <a href="testimonials.html#donors" class="nav-link">Stories &amp; Voices</a>
       <a href="#ways" class="nav-link">Ways to Contribute</a>
     </nav>
     <div class="flex items-center gap-2.5 sm:gap-3">
@@ -718,7 +719,7 @@ border: none; }
   <div id="mobileMenu" class="xl:hidden hidden bg-cocoa text-white px-6 py-4 space-y-3 text-sm">
     <a href="#about" class="block">About the Scholarship</a>
     <a href="#eligibility" class="block">Eligibility &amp; Selection</a>
-    <a href="#stories" class="block">Stories of Change</a>
+    <a href="testimonials.html#donors" class="block">Stories &amp; Voices</a>
     <a href="#ways" class="block">Ways to Contribute</a>
     <a href="wall-of-donors.html" target="_blank" rel="noopener" class="nav-cta-outline block md:hidden w-full py-3 rounded-xl font-semibold text-center mt-2">Wall of Donors</a>
     <button data-open-donate class="btn-primary md:hidden w-full py-3 rounded-xl font-semibold mt-2">Contribute Now</button>
@@ -1080,7 +1081,7 @@ transition: transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,filter .35s;
   <div class="max-w-[1480px] mx-auto px-5 md:px-10 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
     <div class="lg:col-span-5 reveal">
       <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">Bridging the Gap</h2>
-      <p class="mt-4 text-[15.5px] leading-relaxed text-ink/85 max-w-xl">IIT Kanpur&rsquo;s real infrastructure has always been its people, including the students who couldn&rsquo;t otherwise afford to be here. As part of Greater Than Us and its strategic priority, Talent &ndash; The People Who Carry It Forward, the Alumni Scholarship for Girl Students removes the financial barrier so that talented young women can pursue their IIT Kanpur journey without financial stress.</p>
+      <p class="mt-4 text-[15.5px] leading-relaxed text-ink/85 max-w-xl">IIT Kanpur&rsquo;s real infrastructure has always been its people, including the students who couldn&rsquo;t otherwise afford to be here. As part of <strong class="font-bold text-cocoa">Greater Than Us</strong> and its strategic priority, <strong class="font-bold text-cocoa">Talent &ndash; The People Who Carry It Forward</strong>, the <em>Alumni Scholarship for Girl Students</em> removes the financial barrier so that talented young women can pursue their IIT Kanpur journey without financial stress.</p>
     </div>
     <div class="lg:col-span-7 reveal">
       <ul class="space-y-4 stagger-list">
