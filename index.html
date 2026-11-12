@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alumni Scholarship for Girl Students | IIT Kanpur</title>
+<meta name="description" content="IIT Kanpur's first collective alumni scholarship supporting 20 deserving girl students every year. Contribute to empower young women to learn, grow and realise their potential.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: { DEFAULT: '#F7F1E8', 50: '#FCF9F4', 100: '#F7F1E8', 200: '#EFE4D6', 300: '#E6D6C3' },
+        brick: { DEFAULT: '#A83E24', 600: '#A83E24', 700: '#8F3219', 800: '#6E2611' },
+        cocoa: { DEFAULT: '#3A2118', 900: '#2A1710' },
+        ochre: { DEFAULT: '#B9873B', 500: '#B9873B', 600: '#9E7130' },
+        clay: { DEFAULT: '#EBC8B6', 100: '#F4E2D6', 200: '#EBC8B6', 300: '#DFAB92' },
+        ink: '#4A3A33'
+      },
+      fontFamily: {
+        display: ['Lato', 'system-ui', 'sans-serif'],
+        sans: ['Lato', 'system-ui', 'sans-serif']
+      },
+      boxShadow: {
+        card: '0 10px 30px -12px rgba(58,33,24,.18)',
+        lift: '0 24px 50px -20px rgba(58,33,24,.35)'
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px); }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { background:#F7F1E8; color:#4A3A33; -webkit-font-smoothing:antialiased; }
+  .font-display { letter-spacing:-.01em; }
+  .btn-primary { background:#A83E24; color:#fff; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .btn-primary:hover { background:#8F3219; box-shadow:0 14px 28px -12px rgba(168,62,36,.6); transform: translateY(-2px); }
+  .btn-outline { border:1.5px solid #A83E24; color:#A83E24; transition: all .25s ease; }
+  .btn-outline:hover { background:#A83E24; color:#fff; }
+  .amount-chip { border:1.5px solid #E6D6C3; background:#fff; transition: all .22s ease; }
+  .amount-chip:hover { border-color:#B9873B; transform: translateY(-2px); box-shadow:0 10px 20px -12px rgba(185,135,59,.5); }
+  .amount-chip.active { border-color:#A83E24; background:#FBEDE4; color:#A83E24; }
+  .seg { transition: all .3s cubic-bezier(.4,0,.2,1); }
+  .seg.active { background:#3A2118; color:#fff; }
+  .card-hover { position:relative; overflow:hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease, background .35s ease; will-change: transform; }
+  .card-hover::before { content:""; position:absolute; left:0; right:0; top:0; height:4px; background: linear-gradient(90deg,#A83E24,#B9873B); transform: scaleX(0); transform-origin:left; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .card-hover::after { content:""; position:absolute; inset:0; background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(185,135,59,.12), transparent 45%); opacity:0; transition: opacity .35s; pointer-events:none; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 28px 56px -22px rgba(58,33,24,.38); border-color:#DFAB92; }
+  .card-hover:hover::before { transform: scaleX(1); }
+  .card-hover:hover::after { opacity:1; }
+  .card-hover h3, .card-hover img { transition: color .3s, transform .5s cubic-bezier(.2,.8,.2,1); }
+  .card-hover:hover h3 { color:#A83E24; }
+  .card-hover:hover img { transform: scale(1.04); }
+  .elig-card { position:relative; background:#fff; border:1px solid #EFE4D6; border-left:5px solid; border-radius:18px; padding:28px 28px 26px; box-shadow:0 10px 30px -18px rgba(58,33,24,.18); transform-style:preserve-3d; will-change:transform; }
+  .elig-card.brick { border-left-color:#A83E24; } .elig-card.clay { border-left-color:#DFAB92; } .elig-card.ochre { border-left-color:#B9873B; }
+  .elig-head { display:flex; align-items:center; gap:16px; padding-bottom:18px; border-bottom:1px solid #EFE4D6; }
+  .elig-icon { width:62px; height:62px; border-radius:50%; flex:0 0 auto; display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 12px 24px -12px rgba(58,33,24,.5); }
+  .brick .elig-icon { background:linear-gradient(140deg,#B9503A,#A83E24); } .clay .elig-icon { background:linear-gradient(140deg,#E8B69E,#D99C82); } .ochre .elig-icon { background:linear-gradient(140deg,#C9A05A,#B9873B); }
+  .elig-title { font-size:1.35rem; font-weight:700; color:#3A2118; line-height:1.2; }
+  .elig-sub { font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:4px; }
+  .brick .elig-sub { color:#A83E24; } .clay .elig-sub { color:#D08A6C; } .ochre .elig-sub { color:#B9873B; }
+  .elig-list { margin-top:18px; display:flex; flex-direction:column; gap:12px; font-size:15px; line-height:1.55; color:#4A3A33; }
+  .elig-list strong { color:#3A2118; font-weight:700; }
+  .elig-check { width:26px; height:26px; border-radius:50%; flex:0 0 auto; display:flex; align-items:center; justify-content:center; margin-top:1px; transition: transform .3s, background .3s, color .3s; }
+  .brick-check { background:#F4E2D6; color:#A83E24; } .clay-check { background:#F7E6DE; color:#D08A6C; } .ochre-check { background:#F3E9D2; color:#B9873B; }
+  .elig-card.is-hover .brick-check { background:#A83E24; color:#fff; } .elig-card.is-hover .clay-check { background:#D99C82; color:#fff; } .elig-card.is-hover .ochre-check { background:#B9873B; color:#fff; }
+  .elig-card::after { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background: radial-gradient(500px circle at var(--mx,50%) var(--my,50%), rgba(185,135,59,.10), transparent 45%); opacity:0; transition:opacity .3s; }
+  .elig-card.is-hover::after { opacity:1; }
+  .diff-card { border:1px solid rgba(255,255,255,.12); box-shadow:0 18px 40px -22px rgba(58,33,24,.45); }
+  .diff-soft { background: linear-gradient(135deg,#9E3E27,#7E2F1C); }
+  .diff-deep { background: linear-gradient(135deg,#9E3E27,#7E2F1C); }
+  .diff-card:hover { border-color: rgba(255,255,255,.12); }
+  .diff-card::before, .diff-card::after { display:none; }
+  .form-eyebrow { display:inline-block; font-size:.74rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; color:#B9873B; margin-bottom:8px; }
+  .progress-card { background: linear-gradient(150deg,#A83E24,#8F3219); box-shadow: 0 26px 54px -26px rgba(143,50,25,.7); }
+  #donate .donation-form-container { height:100%; }
+  .nav-link { position:relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#A83E24; transition:width .3s ease; }
+  .nav-link:hover::after { width:100%; }
+  .blob { border-radius: 62% 38% 55% 45% / 48% 60% 40% 52%; }
+  .blob-2 { border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%; }
+  .faq-answer { height:0; overflow:hidden; }
+  .faq-item[data-open="true"] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .3s ease; }
+  .reveal { opacity:0; }
+  input:focus, select:focus, textarea:focus { outline:none; border-color:#B9873B; box-shadow:0 0 0 4px rgba(185,135,59,.18); }
+  .field { border:1.5px solid #E6D6C3; background:#FCF9F4; transition: border-color .2s, box-shadow .2s; }
+  .progress-fill { background: linear-gradient(90deg,#A83E24,#B9873B); }
+  .grain { background-image: radial-gradient(rgba(168,62,36,.06) 1px, transparent 1px); background-size: 22px 22px; }
+  .quote-mark { font-family: 'Lato', sans-serif; font-size: 3.2rem; line-height: 1; color:#DFAB92; }
+  .btn-next { background: linear-gradient(135deg,#B9873B,#9E7130); transition: transform .25s, box-shadow .25s, filter .25s; }
+  .btn-next:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(158,113,48,.7); filter: brightness(1.05); }
+  .dot { width:10px;height:10px;border-radius:999px;background:#E6D6C3;transition:all .3s; }
+  .dot.active { background:#A83E24; width:28px; }
+  .dot.done { background:#B9873B; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1 !important; } * { scroll-behavior:auto !important; } }
+  /* ===== Donation form + FAQ: copied verbatim from the DoRA Pioneering Award page (css/style.css) ===== */
+  :root{--ink:#2A1410;--maroon:#421E18;--rust:#AB4531;--gold:#C9943A;--gold-deep:#B07E2C;--champagne:#FCE2C5;--cream:#FBF7F1;--cream-2:#F4EADD;--paper:#FFFFFF;--muted:rgba(42,20,16,.66);--line:rgba(66,30,24,.10);--shadow:0 22px 50px -30px rgba(66,30,24,.42);--radius:22px;}
+  .faqs .h-sec{text-align:center;color:#3A2118 !important;font-weight:700 !important}
+  .faqs .em{font-style:normal;color:var(--rust)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 22px 40px -14px rgba(176,126,44,.85);filter:brightness(1.04)}
+.btn:active{transform:translateY(0)}
+.btn .arrow{transition:transform .35s}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn-soft{background:var(--cream-2);color:var(--maroon);box-shadow:none}
+.btn-soft:hover{background:var(--champagne);filter:none;box-shadow:none;transform:translateY(-2px)}
+.ways-row{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:18px}
+.ways-link{display:inline-flex;align-items:center;gap:6px;padding:0;border:0;background:none;color:var(--rust);font-weight:600;font-size:.88rem}
+.ways-link span{color:var(--gold-deep)}
+.ways-link:hover{color:var(--gold-deep);text-decoration:underline}
+        /* ==========================================================
+           DONATION FORM DESIGN (matches reference screenshot)
+           Scoped to the backend-integrated form markup only.
+           ========================================================== */
+        /* Neutralize legacy Bootstrap-style wrapper classes so the card
+           fills the .donate-grid column exactly, instead of being capped
+           by an inherited .container max-width from the site stylesheet. */
+        .donate-grid { align-items: stretch; }
+        .donate-grid .container.hero-content,
+        .donate-grid .hero-form-container {
+            width: 100% !important;
+            max-width: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 100%;
+        }
+        .donation-form-container {
+            height: 100%;
+            box-sizing: border-box;
+            background: #ffffff;
+            border: 1px solid #f0e4d8;
+            border-radius: 18px;
+            padding: 36px;
+            box-shadow: 0 10px 40px rgba(139, 58, 38, 0.08);
+        }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+
+        .step-header { margin-bottom: 22px; text-align:center; }
+        .step-header h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #8a3826;
+            margin: 0 0 4px;
+        }
+        .step-header p {
+            font-family: 'Lato', sans-serif;
+            color: #8a7a6d;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Country select + generic dropdowns */
+        .country-select-container { margin-bottom: 20px; }
+        .country-select-label {
+            font-weight: 600;
+color: #3a2a1c;
+font-size: 0.92rem;
+margin-bottom: 8px;
+font-size: .78rem;
+font-weight: 700;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: #AB4531;
+margin: 22px 0 10px;
+display: block;
+text-align: left;
+        }
+        .required-star { color: #c0392b; }
+
+        .dropdown { position: relative; font-family: 'Lato', sans-serif; }
+        .dropdown-selected {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 16px;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            background: #fdfaf6;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #3a2a1c;
+        }
+        .dropdown-selected::after {
+            content: '▾';
+            margin-left: auto;
+            color: #8a7a6d;
+        }
+        .dropdown.active .dropdown-selected { border-color: #B04B34; }
+        .dropdown-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #e8ddd0;
+            border-radius: 10px;
+            box-shadow: 0 14px 34px rgba(0,0,0,.12);
+            max-height: 260px;
+            overflow-y: auto;
+            z-index: 45;
+        }
+        .dropdown.active .dropdown-options { display: block; }
+        .option {
+            padding: 11px 16px;
+            cursor: pointer;
+            font-size: 0.93rem;
+            color: #3a2a1c;
+            display: flex;
+            align-items: center;
+        }
+        .option:hover { background: #fbf1e6; }
+
+        /* Donation type toggle */
+        .donation-type-toggle {
+            display: flex;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 18px 0;
+        }
+        .donation-type-option {
+            flex: 1;
+            text-align: center;
+            padding: 13px 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #6b5b45;
+            background: #f2ece0;
+            cursor: pointer;
+            transition: 0.2s ease;
+            box-sizing: border-box;
+        }
+        .donation-type-option.active { background: #A83E24; color: #fff; }
+
+        /* Amount selection */
+        .amount-options-simple {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .other-option-box { grid-column: 1 / -1; }
+        .amount-option {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            border: 1.5px solid #e3d8c8;
+            border-radius: 10px;
+            padding: 10px 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: #3a2a1c;
+            background: #fff;
+            cursor: pointer;
+            transition: 0.15s ease;
+            padding: 15px;
+border: 1.5px solid var(--line);
+border-radius: 10px;
+background: var(--paper);
+font-family: 'Lato', sans-serif;
+font-size: 1.12rem;
+color: var(--maroon);
+cursor: pointer;
+transition: .3s;
+text-align: center;
+min-width: 0;
+white-space: nowrap;
+        }
+        .amount-option.selected { border-color: #c9974a; background: #f7e3ba; color: #7a4a12;
+background:#FCE2C5; }
+        .other-option-box {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            min-height: 50px;
+            border: 1.5px solid #e3d8c8;
+            border-radius: 10px;
+            padding: 0 10px;
+            background: #fff;
+            cursor: text;
+        }
+        .other-option-box.selected { border-color: #c9974a; background: #f7e3ba; }
+        .currency-symbol { color: #8a7a6d; margin-right: 4px; font-size: 0.92rem; }
+        .other-option-box input {
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            padding: 0 2px;
+            font-size: 0.92rem;
+            background: transparent;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Selected donation summary card */
+        .selected-donation-display {
+            display: none;
+            background: #fbf1e6;
+            border: 1px solid #f0d9bd;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 16px 0;
+        }
+        .selected-donation-display.show { display: block; }
+        .donation-summary { display: flex; align-items: center; justify-content: space-between; }
+        .donation-label {
+            font-size: 0.78rem;
+            color: #8a7a6d;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+            font-family: 'Lato', sans-serif;
+        }
+        .donation-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #8a3826;
+        }
+        .donation-type-badge {
+            background: #8a3826;
+            color: #fff;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Lato', sans-serif;
+            white-space: nowrap;
+        }
+
+        .info-note {
+            background: #fdf6ea;
+            border: 1px solid #f0e2c0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: #6b5b45;
+            margin: 14px 0;
+            font-family: 'Lato', sans-serif;
+        }
+        .info-note strong { color: #3a2a1c; }
+
+        /* Buttons */
+        .form-actions { display: flex; gap: 14px; margin-top: 24px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Lato', sans-serif;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease;
+            width: auto;
+            background: linear-gradient(120deg,var(--gold),var(--gold-deep));
+            color: #fff;
+            box-shadow: 0 14px 30px -12px rgba(176,126,44,.7);
+        }
+        .btn-next, .btn-submit {
+            background: linear-gradient(135deg, #cfa20c, #b8900a);
+            color: #fff;
+            flex: 1;
+        }
+        .btn-next:hover, .btn-submit:hover { background: linear-gradient(135deg, #b8900a, #a37f09); }
+        .btn-prev { background: #f2ece3; color: #6b5b45; flex: 1;background: #F4EADD;
+color: #6b5b45;
+flex: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: .6rem;
+font-family: 'Lato', sans-serif;
+font-weight: 600;
+font-size: .94rem;
+letter-spacing: .03em;
+padding: 17px 32px;
+border-radius: 10px;
+cursor: pointer;
+border: none; }
+        .btn-prev:hover { background: #ece3d5; }
+
+        /* Step 2 - personal info */
+        .section-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #8a3826;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0e4d8;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .form-row.mt-3 { margin-top: 14px; margin-bottom: 0; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            font-size: 0.93rem;
+            font-family: 'Lato', sans-serif;
+            color: #3a2a1c;
+            background: #fdfaf6;
+        }
+        .form-group input:focus { outline: none; border-color: #B04B34; background: #fff; }
+        .form-group input::placeholder { color: #a8998a; }
+
+        .pan-input-container { position: relative; }
+        .pan-tooltip-icon {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #e8ddd0;
+            color: #6b5b45;
+            font-size: 0.72rem;
+            font-weight: 700;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .pan-tooltip {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 38px;
+            background: #3a2a1c;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            width: 220px;
+            z-index: 20;
+            font-family: 'Lato', sans-serif;
+        }
+        .pan-input-container:hover .pan-tooltip { display: block; }
+
+        .conditional-field { margin-top: 4px; }
+
+        label.required {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #3a2a1c;
+        }
+        .radio-group { display: flex; gap: 24px; margin-top: 4px; }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.92rem;
+            color: #3a2a1c;
+        }
+        .radio-option input[type="radio"] { accent-color: #B04B34; width: 16px; height: 16px; }
+
+        .dnote, form + p.dnote {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.8rem;
+            color: #8a7a6d;
+            margin-top: 14px;
+            text-align: center;
+        }
+
+        /* Payment instructions modal (international donors) */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 20, 10, 0.55);
+            z-index: 9998;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .payment-modal-content {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 28px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .payment-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .payment-modal-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: #8a3826;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #8a7a6d;
+            cursor: pointer;
+        }
+        .payment-steps h4 { margin: 0 0 8px; color: #3a2a1c; font-family: 'Lato', sans-serif; }
+        .payment-steps ol { margin: 0; padding-left: 18px; color: #4a3c2c; font-size: 0.92rem; }
+        .payment-steps li { margin-bottom: 6px; }
+        .note-box {
+            background: #fdf6ea;
+            border: 1px solid #f0e2c0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: #6b5b45;
+            margin-top: 14px;
+            font-family: 'Lato', sans-serif;
+        }
+        .proceed-button {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            background: linear-gradient(135deg, #cfa20c, #b8900a);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media (max-width: 640px) {
+            .donation-form-container { padding: 24px; }
+            .amount-options-simple { grid-template-columns: repeat(3, 1fr); gap:8px; }
+            .amount-option { padding:14px 4px; font-size:1rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+.faqs{background:var(--paper)}
+.faqs .head{text-align:center;max-width:60ch;margin:0 auto}
+.faqs .head h2{margin-top:14px}
+.faqlist{max-width:1060px;margin:30px auto 0}
+.faq{border-bottom:1px solid var(--line)}
+.faq .qbtn{width:100%;text-align:left;padding:17px 4px;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:none;cursor:pointer;font-family: 'Lato', sans-serif;font-size:clamp(1rem,2.4vw,1.14rem);color:var(--maroon);font-weight:500}
+.faq .qicon{width:28px;height:28px;flex:0 0 auto;border-radius:8px;display:grid;place-items:center;background:var(--champagne);color:var(--rust);transition:transform .4s;font-size:1.1rem;line-height:1}
+.faq.open .qicon{transform:rotate(45deg)}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq.open .ans{max-height:360px}
+.faq .ans p{padding:0 4px 18px;font-size:.96rem;line-height:1.6}
+.faq .ans a{color:var(--rust);font-weight:600;text-decoration:underline}
+@media(min-width:860px){.faqlist{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;align-items:start}}
+  .payment-steps ol{list-style:decimal}
+  html, body, .donation-form-container, .donation-form-container *, .faqs, .faqs *, .payment-modal, .payment-modal * { font-family: 'Lato', system-ui, sans-serif !important; }
+  .step-header h2, .donation-value, .amount-option, .faq .qbtn { font-family:'Lato', sans-serif !important; font-weight:700; }
+  .faqs .h-sec { font-family:'Lato', sans-serif !important; font-size:1.875rem !important; }
+  @media (min-width:768px) { .faqs .h-sec { font-size:2.4rem !important; } }
+  .logo-img { filter:none; }
+  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.75), rgba(42,23,16,0)); }
+  #nav.nav-scrolled { background: rgba(42,23,16,.96); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -18px rgba(0,0,0,.6); }
+  #nav nav a { color:#fff; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
+  .footer-art { opacity:.3; -webkit-mask-image:linear-gradient(to right, transparent, #000 30%); mask-image:linear-gradient(to right, transparent, #000 30%); }
+  /* ---- FAQ accordion ---- */
+  .faq2 { background:rgba(255,255,255,.55); border:1px solid #E6D6C3; border-radius:12px; margin-bottom:10px; overflow:hidden; transition: box-shadow .3s, border-color .3s, background .3s; }
+  .faq2:hover { border-color:#DFAB92; background:#fff; }
+  .faq2.open { border-color:#A83E24; background:#fff; box-shadow:0 18px 40px -26px rgba(168,62,36,.35); }
+  .faq2-q { width:100%; display:flex; align-items:center; gap:16px; text-align:left; padding:15px 18px 15px 36px; background:none; border:none; cursor:pointer; color:#3A2118; font-family:'Lato',sans-serif; }
+  .faq2-t { flex:1; font-size:1rem; font-weight:500; line-height:1.35; transition:color .3s; }
+  .faq2.open .faq2-t { color:#A83E24; font-weight:700; }
+  .faq2-icon { width:24px; height:24px; flex:0 0 auto; display:flex; align-items:center; justify-content:center; color:#3A2118; transition: transform .4s cubic-bezier(.2,.8,.2,1), color .3s; }
+  .faq2.open .faq2-icon { color:#A83E24; transform: rotate(45deg); }
+  .faq2-a { display:grid; grid-template-rows:0fr; transition: grid-template-rows .45s cubic-bezier(.2,.8,.2,1); }
+  .faq2.open .faq2-a { grid-template-rows:1fr; }
+  .faq2-a-in { overflow:hidden; padding:0 18px 0 36px; color:#4A3A33; font-size:15px; line-height:1.65; opacity:0; transition: opacity .35s .1s, padding .3s; }
+  .faq2.open .faq2-a-in { padding-bottom:18px; opacity:1; }
+  @media (max-width:640px) { .faq2-q { padding:14px 16px; gap:12px; } .faq2-a-in { padding-left:16px; } }
+  .glass { background: rgba(58,33,24,.35); border:1px solid rgba(255,255,255,.22); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); will-change: transform; }
+  @media (hover:none) {
+    .card-hover:hover, .elig-card:hover { transform:none; }
+    .card-hover.is-touch { transform: scale(.985); box-shadow:0 18px 40px -22px rgba(58,33,24,.35); border-color:#DFAB92; transition: transform .2s, box-shadow .2s; }
+    .card-hover.is-touch::before { transform: scaleX(1); }
+    .elig-card.is-touch { transform: scale(.985); }
+    .faq2.is-touch { border-color:#DFAB92; }
+    .card-hover::after { display:none; }
+  }
+  /* ---- Lato everywhere (incl. form controls) ---- */
+  button, input, select, textarea, optgroup { font-family: 'Lato', system-ui, sans-serif; }
+  /* ---- Student testimonial card: vertical (photo on top, panel below) ---- */
+  .scard { position:relative; display:flex; flex-direction:column; padding-left:14px; }
+  .scard::before { content:""; position:absolute; left:0; top:56px; bottom:30px; width:58%; border-radius:28px 28px 28px 78px; background:linear-gradient(165deg,#D2A659,#B9873B); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+  .scard:hover::before { transform:translate(-4px,6px); }
+  .scard-photo { position:relative; z-index:2; width:64%; max-width:230px; aspect-ratio:1/1; margin:0 0 -46px 16px; border-radius:26px 26px 26px 72px; overflow:hidden; border:4px solid #fff; background:#F4E2D6; box-shadow:0 18px 34px -18px rgba(42,23,16,.65); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+  .scard:hover .scard-photo { transform:translateY(-6px); }
+  .scard-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+  .scard-panel { position:relative; z-index:1; flex:1; background:#2A1710; color:#fff; border-radius:24px 68px 24px 24px; padding:68px 22px 28px; text-align:center; box-shadow:0 26px 50px -28px rgba(42,23,16,.8); }
+  .scard-head { display:flex; justify-content:center; }
+  .scard-name { font-weight:700; font-size:1.12rem; line-height:1.25; color:#fff; }
+  .scard-prog { margin-top:5px; font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; line-height:1.4; color:#EBC8B6; }
+  .scard-text { margin-top:16px; font-size:14px; line-height:1.68; color:rgba(255,255,255,.84); }
+  @media (max-width:639px) { .scard-photo { width:56%; } }
+  /* ---- Donor testimonial card: text left, large portrait right ---- */
+  .dcard { container-type:inline-size; display:flex; }
+  .dcard-in { flex:1; display:grid; grid-template-columns:104px 1fr; grid-template-areas:"photo head" "quote quote"; column-gap:18px; row-gap:18px; align-items:center; align-content:start; border-radius:24px; padding:22px 20px 24px; margin:0; }
+  .dcard-head { grid-area:head; min-width:0; display:flex; flex-direction:column; }
+  .dcard-name { font-style:normal; font-weight:700; font-size:1.18rem; line-height:1.25; color:#3A2118; transition:color .3s; }
+  .dcard-in:hover .dcard-name { color:#A83E24; }
+  .dcard-batch { margin-top:5px; font-size:.86rem; font-weight:700; color:#A83E24; line-height:1.35; }
+  .dcard-rule { display:block; width:44px; height:3px; border-radius:3px; margin-top:12px; background:linear-gradient(90deg,#A83E24,#B9873B); }
+  .dcard-quote { grid-area:quote; position:relative; font-size:15.5px; line-height:1.7; color:#4A3A33; }
+  .dcard-quote .quote-mark { display:block; font-size:2.6rem; height:1.4rem; margin-bottom:6px; }
+  .dcard-photo { grid-area:photo; position:relative; align-self:start; margin:0 8px 8px 0; }
+  .dcard-photo::before { content:""; position:absolute; inset:0; transform:translate(8px,8px); border-radius:18px 18px 18px 44px; background:linear-gradient(150deg,#EBC8B6,#DFAB92); transition:transform .45s cubic-bezier(.2,.8,.2,1); }
+  .dcard-in:hover .dcard-photo::before { transform:translate(11px,11px); }
+  .dcard-frame { position:relative; display:flex; align-items:center; justify-content:center; aspect-ratio:4/5; overflow:hidden; border-radius:18px 18px 18px 44px; border:3px solid #fff; background:#F4E2D6; color:#A83E24; font-weight:700; font-size:1.4rem; box-shadow:0 14px 30px -16px rgba(58,33,24,.5); }
+  .dcard-frame:has(img) { color:transparent; }
+  .dcard-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  /* hover: gradient border on all four sides (instead of the top line only) */
+  .dcard-in.card-hover::before { inset:0; height:auto; border-radius:inherit; padding:3px; background:linear-gradient(135deg,#A83E24,#B9873B 50%,#A83E24); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude; transform:none; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:3; }
+  .dcard-in.card-hover:hover::before, .dcard-in.card-hover.is-touch::before { transform:none; opacity:1; }
+  .dcard-in.card-hover:hover { border-color:transparent; }
+  @container (min-width:540px) {
+    .dcard-in { grid-template-columns:1fr 190px; grid-template-rows:auto 1fr; grid-template-areas:"head photo" "quote photo"; column-gap:30px; row-gap:16px; padding:30px 32px 34px; align-items:start; }
+    .dcard-name { font-size:1.4rem; }
+    .dcard-photo { align-self:center; margin:0 12px 12px 0; }
+    .dcard-photo::before { transform:translate(12px,12px); border-radius:24px 24px 24px 72px; }
+    .dcard-in:hover .dcard-photo::before { transform:translate(16px,16px); }
+    .dcard-frame { border-radius:24px 24px 24px 72px; border-width:4px; }
+  }
+  @container (min-width:640px) { .dcard-in { grid-template-columns:1fr 215px; column-gap:36px; } }
+  /* ---- All CTAs: 12px corner radius ---- */
+  .btn, .btn-next, .btn-prev, .btn-submit, .btn-primary, .btn-outline { border-radius:12px !important; }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-[72px] flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 text-white group">
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-12 md:h-[58px] w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/90">
+      <a href="#about" class="nav-link">About the Scholarship</a>
+      <a href="#eligibility" class="nav-link">Eligibility &amp; Selection</a>
+      <a href="#stories" class="nav-link">Stories</a>
+      <a href="#voices" class="nav-link">Voices of Generosity</a>
+      <a href="#faqs" class="nav-link">FAQs</a>
+    </nav>
+    <button data-open-donate class="hidden md:inline-flex btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl">Contribute Now</button>
+    <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-cocoa text-white px-6 py-4 space-y-3 text-sm">
+    <a href="#about" class="block">About the Scholarship</a>
+    <a href="#eligibility" class="block">Eligibility &amp; Selection</a>
+    <a href="#stories" class="block">Stories</a>
+    <a href="#voices" class="block">Voices of Generosity</a>
+    <a href="#faqs" class="block">FAQs</a>
+    <button data-open-donate class="btn-primary w-full py-3 rounded-xl font-semibold mt-2">Contribute Now</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative min-h-[96vh] lg:min-h-[86vh] flex items-end lg:items-center overflow-hidden bg-cocoa-900">
+  <div class="absolute inset-0">
+    <picture class="absolute inset-0 block"><source media="(max-width: 1023px)" srcset="images/banner-mobile.jpg"><img id="heroImg" src="images/banner.jpg" alt="IIT Kanpur students studying together on the lawns in front of the library" class="w-full h-full object-cover object-[60%_center] scale-105"></picture>
+    <div class="absolute inset-0 bg-gradient-to-r from-cocoa-900/70 via-cocoa-900/35 to-cocoa-900/10 lg:from-cocoa-900/80 lg:via-cocoa-900/35 lg:to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-cocoa-900/60 via-transparent to-cocoa-900/30"></div>
+  </div>
+
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-[62vh] pb-12 lg:pt-32 lg:pb-20 w-full grid lg:grid-cols-12 gap-10 items-end lg:items-center">
+    <div class="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-cocoa-900 via-cocoa-900/70 to-transparent lg:hidden"></div>
+    <div class="lg:col-span-7 text-white relative">
+      <p class="hero-el text-lg md:text-xl text-clay-100 font-display italic mb-2">IIT Kanpur&rsquo;s</p>
+      <h1 class="hero-el font-display font-semibold leading-[1.05] text-[2.5rem] sm:text-5xl md:text-[3.4rem] xl:text-[3.9rem] max-w-2xl">Alumni Scholarship<br>for Girl Students</h1>
+      <p class="hero-el mt-5 text-base md:text-lg text-white/85 max-w-md leading-relaxed">Empowering young women to learn, grow and realise their potential.</p>
+      <div class="hero-el mt-8 flex flex-wrap gap-4">
+        <button data-open-donate class="btn-primary px-7 py-3.5 rounded-xl font-semibold inline-flex items-center gap-2">Contribute Now <span aria-hidden="true">→</span></button>
+        <a href="#about" class="px-7 py-3.5 rounded-xl font-semibold border border-white/60 text-white hover:bg-white/10 transition">Learn more</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ DONATE (form + campaign progress) ============ -->
+<section id="donate" class="py-16 md:py-24 bg-cream-100 scroll-mt-20">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10">
+    <h2 class="reveal font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight text-center">Help her continue her IIT Kanpur journey</h2>
+    <div class="mt-10 md:mt-12 grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+      <div class="reveal lg:col-span-7">
+<div class="donation-form-container">
+                    <!-- Step 1: Donation Impact -->
+                    <div id="step1" class="form-step active">
+                        <div class="step-header">
+                            <div class="form-eyebrow">Support a Girl Student</div>
+                            <h2>Choose Your Impact</h2>
+                            <p>Select donation type and amount</p>
+                        </div>
+
+                        <!-- Country Selection - PROMINENT -->
+                        <div class="country-select-container">
+                            <div class="country-select-label">
+                                Select Country <span class="required-star">*</span>
+                            </div>
+                            <div class="dropdown country-dropdown">
+                                <div class="dropdown-selected">
+                                    <span class="flag" id="cFlag">🇮🇳</span> India
+                                </div>
+                                <div class="dropdown-options">
+                                    <div class="option" data-value="india" data-country-code="in">
+                                     <span class="flag" id="cFlag">🇮🇳</span>&nbsp;India
+                                    </div>
+                                    <div class="option" data-value="usa" data-country-code="us">
+                                      <span class="flag">🇺🇸</span>&nbsp;United States
+                                    </div>
+                                    <div class="option" data-value="australia" data-country-code="au">
+                                     <span class="flag">🇦🇺</span>&nbsp;Australia
+                                    </div>
+                                    <div class="option" data-value="uk" data-country-code="gb">
+                                      <span class="flag">🇬🇧</span>&nbsp;United Kingdom
+                                    </div>
+                                    <div class="option" data-value="canada" data-country-code="ca">
+                                        <span class="flag">🇨🇦</span>&nbsp;Canada
+                                    </div>
+                                    <div class="option" data-value="germany" data-country-code="de">
+                                      <span class="flag">🇩🇪</span>&nbsp;Germany
+                                    </div>
+                                    <div class="option" data-value="belgium" data-country-code="be">
+                                     <span class="flag">🇧🇪</span>&nbsp;Belgium
+                                    </div>
+                                    <div class="option" data-value="other" data-country-code="globe">
+                                      <span class="flag">🌍</span>&nbsp;Other Country
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- India Content (Initially Visible) -->
+                        <div id="india-content">
+                            <!-- Donation Type Toggle -->
+                            <div class="donation-type-toggle">
+                                <div class="donation-type-option active" data-type="one-time">One-time Donation</div>
+                                <div class="donation-type-option" data-type="monthly">Monthly Donation</div>
+                            </div>
+
+                            <!-- One-time Amount Options -->
+                            <div class="amount-options-simple" id="onetime-amounts">
+                                <div class="amount-option" data-amount="50000">₹50,000</div>
+                                <div class="amount-option" data-amount="25000">₹25,000</div>
+                                <div class="amount-option" data-amount="10000">₹10,000</div>
+                                <div class="other-option-box" id="onetime-other-option-box">
+                                    <span class="currency-symbol">₹</span>
+                                    <input type="number" id="onetime-customAmountInput" placeholder="Other" min="1">
+                                </div>
+                            </div>
+
+                            <!-- Monthly Amount Options (Initially Hidden) -->
+                            <div class="amount-options-simple" id="monthly-amounts" style="display: none;">
+                                <div class="amount-option" data-amount="10000">₹10,000</div>
+                                <div class="amount-option" data-amount="5000">₹5,000</div>
+                                <div class="amount-option" data-amount="1000">₹1,000</div>
+                                <div class="other-option-box" id="monthly-other-option-box">
+                                    <span class="currency-symbol">₹</span>
+                                    <input type="number" id="monthly-customAmountInput" placeholder="Other" min="1">
+                                </div>
+                            </div>
+
+                            <!-- Selected Donation Display -->
+                            <div id="selectedDonationDisplay" class="selected-donation-display">
+                                <div class="donation-summary">
+                                    <div>
+                                        <div class="donation-label">Selected Donation</div>
+                                        <div class="donation-value" id="selectedAmountDisplay">₹0</div>
+                                    </div>
+                                    <div class="donation-type-badge" id="selectedTypeDisplay">One-time</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Countries Content (Initially Hidden) -->
+                        <div id="other-country-content" style="display: none;">
+                            <!-- Donation Type Toggle for Other Countries -->
+                            <div class="donation-type-toggle">
+                                <div class="donation-type-option active" data-type="one-time">One-time Donation</div>
+                                <div class="donation-type-option" data-type="monthly">Monthly Donation</div>
+                            </div>
+                            
+                            <div class="info-note">
+                                <strong>Note:</strong> You will be redirected to our secure payment partner's website for your selected country.
+                            </div>
+                        </div>
+
+                        <div class="form-actions" style="display:flex; justify-content:center; margin-top:15px;">
+                            <button class="btn btn-next" id="nextButton" style="display: inline-flex;align-items: center;justify-content: center;
+gap: .6rem;
+font-family: 'Lato', sans-serif;
+font-weight: 600;
+font-size: .94rem;
+letter-spacing: .03em;
+padding: 17px 32px;
+border-radius: 10px;
+cursor: pointer;
+border: none;
+width: auto;
+background: linear-gradient(120deg,var(--gold),var(--gold-deep));
+color: #fff;
+box-shadow: 0 14px 30px -12px rgba(176,126,44,.7);
+transition: transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,filter .35s;">
+                                Next →
+                            </button>
+                        </div>
+                        <div class="ways-row">
+                            <a class="ways-link" href="ways-to-contribute" target="_blank" rel="noopener">Ways to Contribute (Outside India) <span>→</span></a>
+                            <a class="ways-link" href="https://iitk.ac.in/dora/annualgiving/testimonials/guidebook-donating-iitkfoundation.pdf" 
+                            target="_blank" rel="noopener">USA Donation Guidebook <span>→</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Personal Details (India only) -->
+                    <div id="step2" class="form-step">
+                        <div class="step-header">
+                            <h2>Your Information</h2>
+                            <p>Please provide your details</p>
+                        </div>
+
+                        <form id="donationForm" method="post" action="">
+                            <!-- Donation Summary at Top -->
+                            <div class="selected-donation-display show" style="margin-bottom: 20px;">
+                                <div class="donation-summary">
+                                    <div>
+                                        <div class="donation-label">Your Donation</div>
+                                        <div class="donation-value" id="step2AmountDisplay">₹0</div>
+                                    </div>
+                                    <div class="donation-type-badge" id="step2TypeDisplay">One-time</div>
+                                </div>
+                            </div>
+
+                            <!-- Personal Information -->
+                            <div class="form-group">
+                                <div class="section-title">Personal Information</div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" placeholder="Full Name *" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" placeholder="Email *" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                       <input type="tel" name="phone" id="phone" placeholder="+91XXXXXXXXXX" required>
+                                    </div>
+                                    <div class="form-group pan-input-container">
+                                        <input type="text" name="pannumber" id="panInput" maxlength="10"
+                                            placeholder="PAN (Optional)" style="text-transform: uppercase">
+                                        <div class="pan-tooltip-icon">i</div>
+                                        <div class="pan-tooltip">
+                                            <strong>Note:</strong> Enter PAN to receive 80G certificate.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Alumni Information -->
+                            <div class="form-group">
+                                <div class="dropdown affiliation-dropdown">
+                                    <div class="dropdown-selected">Affiliation *</div>
+                                    <div class="dropdown-options">
+                                        <div class="option" data-value="alumni">Alumni</div>
+                                        <div class="option" data-value="non-alumni">Non-Alumni</div>
+                                        <div class="option" data-value="organization">Organization</div>
+                                    </div>
+                                </div>
+
+                                <div id="alumniFields" class="conditional-field" style="display: none;">
+                                    <div class="form-row mt-3">
+                                        <div class="dropdown program-dropdown">
+                                            <div class="dropdown-selected">Select Program *</div>
+                                            <div class="dropdown-options">
+                                                <div class="option" data-value="B.TECH">B.TECH</div>
+                                                <div class="option" data-value="M.TECH">M.TECH</div>
+                                                <div class="option" data-value="Ph.D">Ph.D</div>
+                                                <div class="option" data-value="MBA">MBA</div>
+                                                <div class="option" data-value="M.Sc">M.Sc</div>
+                                                <div class="option" data-value="B.Sc">B.Sc</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown yog-dropdown">
+                                            <div class="dropdown-selected">Year of Graduation *</div>
+                                            <div class="dropdown-options" id="yog-options"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mt-3">
+                                        <div class="form-group">
+                                            <input type="text" name="roll_no" id="roll_no" placeholder="Roll Number">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="currency" id="currency" value="inr">
+                                        <input type="hidden" name="country" id="countryInput" value="India">
+                                        <input type="hidden" name="select_category" id="select_category">
+                                        <input type="hidden" name="program" id="program">
+                                        <input type="hidden" name="department" id="department">
+                                        <input type="hidden" name="Year_of_Graduation" id="Year_of_Graduation">
+                                        <input type="hidden" name="amount" id="amount" value="500">
+                                        <input type="hidden" name="display_method" id="display_method" value="web">
+                                        <input type="hidden" name="purpose" id="purpose" value="Alumni Scholarship for Girl Students">
+                                        <input type="hidden" name="donationtime" id="donationtime" value="">
+                                        <input type="hidden" name="recurring-frequency" id="recurring_frequency" value="monthly">
+                                        <input type="hidden" name="time_end" id="time_end" value="10">
+                                </div>
+                            </div>
+
+                            <!-- Receipt Preferences -->
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class="required"
+                                        style="display: block;margin-top:18px;font-size: 14px;color:#AB4531;font-weight: 600;font-size: .95rem;text-align:left;">Mark this
+                                        donation as Anonymous?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="anonymous" value="Yes">
+                                            <span class="radio-label">Yes</span>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="anonymous" value="No" checked>
+                                            <span class="radio-label">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-prev btn-soft" onclick="switchTab(1)"  style="display: inline-flex;">←
+                                    Previous</button>
+                                <button type="submit" class="btn btn-submit" onclick="return validateForm()" style="display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: .6rem;
+font-family: 'Lato', sans-serif;
+font-weight: 600;
+font-size: .94rem;
+letter-spacing: .03em;
+padding: 17px 32px;
+border-radius: 10px;
+cursor: pointer;
+border: none;
+width: auto;
+background: linear-gradient(120deg,var(--gold),var(--gold-deep));
+color: #fff;
+box-shadow: 0 14px 30px -12px rgba(176,126,44,.7);
+transition: transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,filter .35s;">Pay Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+      </div>
+      <div class="reveal lg:col-span-5 flex flex-col gap-5">
+        <div class="progress-card rounded-2xl p-7 md:p-8 text-white">
+          <div class="flex items-baseline justify-between gap-3">
+            <span class="text-[11px] font-bold tracking-[.2em] uppercase text-clay-100">Campaign Progress</span>
+            <span class="text-sm font-semibold"><span id="progressLabel">0%</span> &middot; &#8377;47 L left</span>
+          </div>
+          <div class="mt-4 h-3.5 rounded-full bg-white/20 overflow-hidden">
+            <div id="progressBar" class="h-full rounded-full bg-gradient-to-r from-ochre-600 via-ochre to-[#F2D49B]" style="width:0%" data-pct="53"></div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 gap-5">
+            <div class="border-l-2 border-clay-200/60 pl-4">
+              <div class="font-display text-3xl md:text-4xl font-bold leading-none">&#8377;<span class="counter" data-to="53">0</span><span class="text-lg text-clay-100"> L</span></div>
+              <div class="text-[11px] tracking-[.14em] uppercase text-clay-100/80 mt-2">Raised</div>
+            </div>
+            <div class="border-l-2 border-clay-200/60 pl-4">
+              <div class="font-display text-3xl md:text-4xl font-bold leading-none">&#8377;<span class="counter" data-to="1">0</span><span class="text-lg text-clay-100"> Cr</span></div>
+              <div class="text-[11px] tracking-[.14em] uppercase text-clay-100/80 mt-2">Milestone</div>
+            </div>
+          </div>
+          <p class="mt-6 text-sm text-clay-100/90 leading-relaxed">&#8377;10 lakhs have already been utilised to support <strong class="text-white">20 girl students</strong> in FY 2025&ndash;26. Your gift helps us reach 20 more next year.</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl border border-cream-300 p-6 md:p-7">
+          <h4 class="flex items-center gap-3 font-display text-lg font-bold text-cocoa"><span class="w-9 h-9 rounded-lg bg-clay-100 text-brick flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>Tax benefits</h4>
+          <p class="mt-3 text-[15px] text-ink/80 leading-relaxed">100% tax benefits under Section 80G (India) and section 501(c)(3) in USA via the IITK Foundation. Tax benefits in the UK, Canada and Australia are subject to local regulations.</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl border border-cream-300 p-6 md:p-7">
+          <h4 class="flex items-center gap-3 font-display text-lg font-bold text-cocoa"><span class="w-9 h-9 rounded-lg bg-clay-100 text-brick flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0114 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span>Where your gift goes</h4>
+          <p class="mt-3 text-[15px] text-ink/80 leading-relaxed">Every contribution goes to the annual scholarship pool &mdash; &#8377;75,000 per student per year for meritorious girl students in B.Tech. and M.Sc. who fall outside government support norms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="bg-cream-50 overflow-hidden">
+  <div class="grid lg:grid-cols-2 items-stretch">
+    <div class="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] img-zoom overflow-hidden">
+      <img src="images/about.jpg" alt="IIT Kanpur students studying together on campus" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy">
+      <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-cream-50/90 hidden lg:block"></div>
+    </div>
+    <div class="flex items-center">
+      <div class="reveal px-6 sm:px-10 lg:px-14 xl:px-20 py-14 lg:py-20 max-w-2xl">
+        <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">About the Scholarship</h2>
+        <div class="mt-6 space-y-5 text-[16px] leading-relaxed text-ink/85">
+          <p>The Alumni Scholarship for Girl Students is the first collective scholarship initiative of the IIT Kanpur community, bringing alumni and well-wishers together to support deserving young women who face genuine financial challenges but fall outside existing government fee-benefit norms.</p>
+          <p>This initiative was born from a group of women alumni, at PARWA 2025, who wanted to give back to IIT Kanpur, an institution that had given them so much and shaped their journeys. Their shared desire to create opportunities for the next generation of women scholars led them to come together and establish this continuing scholarship.</p>
+          <p>Today, the initiative supports <strong class="text-cocoa">20 girl students every year</strong>, creating a larger and sustained impact through collective giving.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRIDGING THE GAP ============ -->
+<section class="bg-cream-200/60 py-14 md:py-16">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="lg:col-span-5 reveal">
+      <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">Bridging the Gap</h2>
+      <p class="mt-4 text-[15.5px] leading-relaxed text-ink/85 max-w-xl">The Alumni Scholarship for Girl Students seeks to bridge this gap, enabling talented young women to pursue their IIT Kanpur journey without financial stress.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <ul class="space-y-4 stagger-list">
+        <li class="flex gap-3.5 text-[15.5px] leading-relaxed text-ink/85"><span class="w-6 h-6 rounded-full bg-brick text-white flex items-center justify-center shrink-0 mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>Providing scholarships to meritorious girl students in B.Tech. and 2-year Master&rsquo;s courses.</span></li>
+        <li class="flex gap-3.5 text-[15.5px] leading-relaxed text-ink/85"><span class="w-6 h-6 rounded-full bg-brick text-white flex items-center justify-center shrink-0 mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>Supporting those who fall outside government support norms but still face genuine financial challenges.</span></li>
+        <li class="flex gap-3.5 text-[15.5px] leading-relaxed text-ink/85"><span class="w-6 h-6 rounded-full bg-brick text-white flex items-center justify-center shrink-0 mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>Enabling young women to pursue academics without the burden of financial stress.</span></li>
+        <li class="flex gap-3.5 text-[15.5px] leading-relaxed text-ink/85"><span class="w-6 h-6 rounded-full bg-brick text-white flex items-center justify-center shrink-0 mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>Promoting holistic growth and development alongside academic excellence.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFFERENCE ============ -->
+<section class="pt-10 pb-14 md:pt-12 md:pb-16 bg-cream-50">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10">
+    <div class="grid lg:grid-cols-2 gap-5 stagger-grid">
+      <div class="card-hover diff-card diff-soft rounded-2xl p-6 md:p-7 text-white flex items-center gap-4 sm:gap-6">
+        <span class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M7 20v-2a5 5 0 0 1 10 0v2M1.5 18v-1a3.5 3.5 0 0 1 5-3.2M22.5 18v-1a3.5 3.5 0 0 0-5-3.2"/></svg></span>
+        <div>
+          <p class="text-lg md:text-xl font-bold"><span class="opacity-95">The Difference</span> <span class="font-normal opacity-95">You Have Made</span></p>
+          <p class="mt-1.5 text-lg sm:text-xl md:text-2xl"><strong class="font-bold">20 Girl Students</strong> <span class="mx-2 opacity-60">|</span> <strong class="font-bold">50K</strong> <span class="font-normal">scholarship per student</span></p>
+          <p class="mt-1.5 text-sm opacity-85">(FY 2025&ndash;2026)</p>
+        </div>
+      </div>
+      <div class="card-hover diff-card diff-deep rounded-2xl p-6 md:p-7 text-white flex items-center gap-4 sm:gap-6">
+        <span class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 17V11M10 17V7M15 17v-4M20 17V5"/><path d="M4 9l5-4 4 3 7-6M16 2h4v4"/></svg></span>
+        <div>
+          <p class="text-lg md:text-xl font-bold"><span class="opacity-95">The Difference</span> <span class="font-normal opacity-95">You Can Make</span></p>
+          <p class="mt-1.5 text-lg sm:text-xl md:text-2xl"><strong class="font-bold">20 more girl students</strong> <span class="mx-2 opacity-60">|</span> <strong class="font-bold">75K</strong> <span class="font-normal">scholarship per year</span></p>
+          <p class="mt-1.5 text-sm opacity-85">(FY 2026&ndash;2027)</p>
+        </div>
+      </div>
+    </div>
+    <p class="reveal text-center mt-12 md:mt-14 relative z-10 font-display text-xl md:text-[1.75rem] font-bold text-cocoa leading-snug max-w-4xl mx-auto">Your contribution can help a deserving girl <span class="text-brick">continue her IIT Kanpur journey</span> with greater confidence and focus.</p>
+  </div>
+</section>
+
+<!-- ============ ELIGIBILITY ============ -->
+<section id="eligibility" class="py-16 md:py-24 bg-cream-100 relative overflow-hidden">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 relative">
+    <div class="reveal text-center">
+      <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">Scholarship Eligibility &amp; Selection</h2>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid" id="eligGrid">
+      <article class="elig-card brick" data-theme="brick">
+        <div class="elig-head">
+          <span class="elig-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 8v6"/></svg></span>
+          <div><h3 class="elig-title">B.Tech. Students</h3></div>
+        </div>
+        <ul class="elig-list"><li class="elig-item flex gap-3"><span class="elig-check brick-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>Eligibility:</strong> Female students with annual family income between ₹8&ndash;15 lakhs.</span></li><li class="elig-item flex gap-3"><span class="elig-check brick-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>Who can apply:</strong> All undergraduate students, including those enrolled in dual degree programmes.</span></li><li class="elig-item flex gap-3"><span class="elig-check brick-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>1st Year:</strong> Selection based on All India Rank (AIR).</span></li><li class="elig-item flex gap-3"><span class="elig-check brick-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>2nd Year onwards:</strong> Selection based on highest CPI.</span></li><li class="elig-item flex gap-3"><span class="elig-check brick-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>Continuation:</strong> Recipients must maintain a minimum CPI of 7.0.</span></li></ul>
+      </article>
+      <article class="elig-card clay" data-theme="clay">
+        <div class="elig-head">
+          <span class="elig-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M8 15h8"/></svg></span>
+          <div><h3 class="elig-title">M.Sc. Students</h3></div>
+        </div>
+        <ul class="elig-list"><li class="elig-item flex gap-3"><span class="elig-check clay-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>Eligibility:</strong> Female students with annual family income up to ₹9 lakhs.</span></li><li class="elig-item flex gap-3"><span class="elig-check clay-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>1st Year:</strong> Selection based on JAM score, with preference given to higher scores.</span></li><li class="elig-item flex gap-3"><span class="elig-check clay-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span><strong>2nd Year:</strong> Selection based on highest CPI, with preference to previous beneficiaries maintaining a minimum CPI of 7.0.</span></li></ul>
+      </article>
+      <article class="elig-card ochre md:col-span-2 lg:col-span-1" data-theme="ochre">
+        <div class="elig-head">
+          <span class="elig-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 12h8M8 16h5"/><path d="m16 17 1 2 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L13 19.3l2-.3z" fill="currentColor" stroke="none"/></svg></span>
+          <div><h3 class="elig-title">Additional Criteria</h3></div>
+        </div>
+        <ul class="elig-list"><li class="elig-item flex gap-3"><span class="elig-check ochre-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>Preference will be given to students not receiving any other institutional or government scholarship.</span></li><li class="elig-item flex gap-3"><span class="elig-check ochre-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span><span>The 20 scholarships will be allocated between B.Tech. and M.Sc. students based on merit and the applicant pool in each academic session.</span></li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORIES ============ -->
+<section id="stories" class="relative bg-brick text-white overflow-hidden">
+  <div class="relative h-56 sm:h-72 w-full lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[46%]">
+    <img src="images/campus.jpg" alt="IIT Kanpur students on campus" class="w-full h-full object-cover object-[70%_22%] lg:object-[62%_center]">
+    <div class="absolute inset-0 bg-gradient-to-t from-brick via-brick/30 to-transparent lg:bg-gradient-to-r lg:from-brick lg:via-brick/30 lg:to-brick/20"></div>
+  </div>
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-6 pb-16 lg:py-24">
+    <div class="lg:w-[60%]">
+      <h2 class="reveal font-display text-3xl md:text-[2.4rem] font-bold text-white leading-tight">Stories of Scholarship Recipients</h2>
+      <p class="reveal mt-3 text-white/85 max-w-xl text-[15.5px]">Every student has a story, a journey and aspirations for the future. Meet the young women whose IIT Kanpur journeys are being strengthened through this initiative.</p>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-12">
+      <article class="scard reveal">
+        <div class="scard-photo"><img src="images/recipients/arundhuti-roy.jpg" alt="Arundhuti Roy" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Arundhuti Roy</h3><p class="scard-prog">M.Sc. Physics</p></div>
+          </div>
+          <p class="scard-text">The scholarship was of great help in my journey towards pursuing a Ph.D. It helped me cover the flight tickets for joining my doctoral programme. Beyond its monetary value, the support has encouraged me to believe in myself and pursue higher education. Such initiatives inspire young women to follow their academic dreams with confidence and determination.</p>
+        </div>
+      </article>
+      <article class="scard reveal">
+        <div class="scard-photo"><img src="images/recipients/gungun.jpg" alt="Gungun Jain" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Gungun Jain</h3><p class="scard-prog">B.Tech. Civil Engineering</p></div>
+          </div>
+          <p class="scard-text">The scholarship brought much-needed financial relief to my family during a difficult period, when managing my educational expenses alongside my brother’s college fees had become challenging. It eased the burden on my father and gave me greater peace of mind to focus on academics and opportunities at IIT Kanpur. I hope to make the most of this support and eventually give back to others.</p>
+        </div>
+      </article>
+      <article class="scard reveal">
+        <div class="scard-photo"><img src="images/recipients/johyna-els-thomas.jpg" alt="Johyna Els Thomas" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Johyna Els Thomas</h3><p class="scard-prog">M.Sc. Physics</p></div>
+          </div>
+          <p class="scard-text">The scholarship came at a crucial time when I needed it most. I remember checking my bank balance after paying my semester fees and wondering how I would manage the next month. At times, I had questioned my decision to pursue higher studies. This support reminded me to keep pushing forward, believe in my journey and never settle for less than I aspire to achieve.</p>
+        </div>
+      </article>
+      <article class="scard reveal">
+        <div class="scard-photo"><img src="images/recipients/neha.jpg" alt="Neha Biswas" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Neha Biswas</h3><p class="scard-prog">M.Tech. Materials Science</p></div>
+          </div>
+          <p class="scard-text">The scholarship came at a time when I was preparing to begin a new chapter in Germany. It helped me purchase essentials, including winter clothes and groceries, and also allowed me to give some money to my family. Being able to support my parents made me feel truly blessed. This support has given me the confidence and strength to move forward with hope and courage.</p>
+        </div>
+      </article>
+    </div>
+    <div class="reveal mt-10 text-center">
+      <a href="testimonials.html#recipients" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-white text-brick text-sm font-bold shadow-card hover:bg-cream-100 hover:-translate-y-0.5 transition">Meet More Recipients <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOICES ============ -->
+<section id="voices" class="py-16 md:py-24 relative overflow-hidden bg-white">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10">
+    <h2 class="reveal font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight text-center">Voices of Generosity</h2>
+    <p class="reveal mt-4 mx-auto max-w-5xl text-center text-ink/80 text-[15.5px] leading-relaxed">The scholarship is powered by alumni who believe in giving back and creating opportunities for the next generation.</p>
+    <div class="mt-10 grid lg:grid-cols-2 gap-6 lg:gap-7 stagger-grid">
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover bg-cream-50 border-cream-300 border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Hari Hariharan (V. Hariharasubramanian)</cite>
+            <span class="dcard-batch">Ph.D. | CHM | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">In 1969 I had to take a bank loan for my living expenses to complete my M.Sc in IITK. So, helping deserving students is very dear to my heart. My wish is that no deserving student should ever reject IITK for financial reasons. If other alumni who have made it in USA can join me, my wish can be fulfilled.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">HH<img src="images/donors/hari-hariharan.jpg" alt="Hari Hariharan (V. Hariharasubramanian)" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover bg-cream-50 border-cream-300 border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Geetha Krishnamurthy</cite>
+            <span class="dcard-batch">Ph.D. | HSS | 1986</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">At IITK, I taught special English classes for students who came from villages and poor families and weren’t exposed to English, the medium of instruction at the institute. What was striking for me was that there wasn’t a single girl student in those classes. I realized that girls didn’t make it that far. Scholarships like this help fix that problem.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">GK<img src="images/donors/geetha-krishnamurthy.jpg" alt="Geetha Krishnamurthy" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover bg-cream-50 border-cream-300 border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Farooq Ahmed Khan</cite>
+            <span class="dcard-batch">M.Sc. (Integrated) | CHM | 1985</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">When I attended IITK during 1985-90, my four siblings were also attending schools/college. A scholarship from Andhra Pradesh covered about 40% of my expenses. My parents borrowed the rest.</p><p class="mt-3">As proud parents of two accomplished daughters, my wife and I are thrilled to contribute to this fund to support the current generation of young women students at IITK.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">FA<img src="images/donors/farooq-ahmed-khan.jpg" alt="Farooq Ahmed Khan" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover bg-cream-50 border-cream-300 border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Varun Mishra</cite>
+            <span class="dcard-batch">B.Tech.–M.Tech. (Dual) | CSE | 2011</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Our society will prosper only when its women receive equal care and opportunities to grow in every walk of life.</p><p class="mt-3">Contributing to this scholarship is my way of showing gratitude to all the wonderful women in my life—my Maa, wife, sisters, and two lovely daughters. They truly make me a better version of myself.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">VM<img src="images/donors/varun-mishra.jpg" alt="Varun Mishra" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+    </div>
+    <div class="reveal text-center mt-8">
+      <a href="testimonials.html#donors" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold">View All Voices <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY + SHARE STRIP ============ -->
+<section id="journey" class="relative overflow-hidden bg-[#9E3E27] text-white">
+  <div class="absolute inset-0 overflow-hidden">
+    <img id="journeyImg" src="images/journey.jpg" alt="" class="absolute left-0 top-0 w-full h-[118%] object-cover object-[12%_center] lg:object-[left_center] will-change-transform" loading="lazy">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-b from-[#9E3E27]/20 via-[#9E3E27]/75 to-[#9E3E27]/90 lg:bg-gradient-to-r lg:from-[#9E3E27]/30 lg:via-[#9E3E27]/80 lg:to-[#9E3E27]/85"></div>
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-40 pb-9 lg:py-10 grid lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+    <div class="hidden lg:block lg:col-span-3"></div>
+    <div class="reveal lg:col-span-5 lg:pr-12">
+      <h2 class="font-display text-2xl md:text-3xl font-bold leading-tight drop-shadow">Be Part of Her Journey</h2>
+      <p class="mt-3 text-[15px] leading-relaxed text-white max-w-md">As alumni across batches come together, this initiative can reach more deserving girl students and create a lasting legacy of opportunity at IIT Kanpur.</p>
+    </div>
+    <div class="reveal lg:col-span-4 lg:pl-12 lg:border-l lg:border-white/25">
+      <div class="flex items-start gap-4">
+        <span class="w-11 h-11 shrink-0 rounded-full bg-white/15 border border-white/25 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/></svg></span>
+        <div>
+          <h3 class="font-display text-lg font-bold">Spread the Word</h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-white/95">Help this initiative reach more people across the IIT Kanpur community. Share it with your batchmates, fellow alumni and friends, and help bring more support to deserving young women.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DONATION FORM (inline section) ============ -->
+<div id="paymentModal" class="payment-modal">
+        <div class="payment-modal-content">
+            <div class="payment-modal-header">
+                <h2 class="payment-modal-title" id="modalCountryTitle">
+                    <span id="modalCountryIcon"></span>
+                    <span id="modalCountryName"></span>
+                    <!-- <span id="modalDonationType"></span> -->
+                    Payment Instructions
+                </h2>
+                <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+            </div>
+            <div id="modalContent"></div>
+            <div class="note-box">
+                <strong>Note:</strong> You will be redirected to our secure payment partner's website to complete your
+                donation.
+            </div>
+            <div style="text-align: center;">
+                <a href="#" id="proceedButton" class="proceed-button" target="_blank">Proceed to Payment</a>
+            </div>
+        </div>
+    </div>
+
+<!-- ============ FAQ ============ -->
+<!-- ============ BENEVITY ============ -->
+<section id="benevity" class="bg-cocoa-900 text-cream-100 relative overflow-hidden">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 py-14 md:py-20 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+    <div class="reveal lg:col-span-6 flex gap-5 sm:gap-7">
+      <span class="w-1.5 self-stretch rounded-full bg-brick shrink-0"></span>
+      <div>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-black leading-[1.05] text-cream-100">Multiple<br>Your Impact<br>with Benevity</h2>
+        <p class="mt-4 text-2xl sm:text-3xl font-normal text-cream-100/95">India &amp; USA</p>
+      </div>
+    </div>
+    <div class="lg:col-span-6 stagger-grid">
+      <div class="flex items-center gap-5 sm:gap-6 py-4 border-b border-cream-100/15 lg:border-b-0"><span class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl bg-cream-100/10 border border-cream-100/25 flex items-center justify-center text-cream-100"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg></span><p class="text-lg sm:text-xl leading-snug lg:pl-6 lg:border-l lg:border-cream-100/30 lg:py-2">Log in to your organisation&rsquo;s Benevity portal.</p></div>
+      <div class="flex items-center gap-5 sm:gap-6 py-4 border-b border-cream-100/15 lg:border-b-0"><span class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl bg-cream-100/10 border border-cream-100/25 flex items-center justify-center text-cream-100"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></span><p class="text-lg sm:text-xl leading-snug lg:pl-6 lg:border-l lg:border-cream-100/30 lg:py-2">Search for Indian Institute of Technology Kanpur.</p></div>
+      <div class="flex items-center gap-5 sm:gap-6 py-4"><span class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl bg-cream-100/10 border border-cream-100/25 flex items-center justify-center text-cream-100"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2L21 12c.7-.7.7-1.9 0-2.6-.7-.7-1.8-.7-2.5-.1L15 12"/><path d="M2 15l6 6"/><path d="M16 8a3 3 0 1 0-3-3 3 3 0 0 0 3 3z" fill="currentColor" stroke="none"/></svg></span><p class="text-lg sm:text-xl leading-snug lg:pl-6 lg:border-l lg:border-cream-100/30 lg:py-2">Explore matching options and make your contribution.</p></div>
+    </div>
+  </div>
+  <div class="h-3 bg-cream-100"></div>
+</section>
+
+<section class="relative overflow-hidden bg-cream-100 faqs" id="faqs">
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 py-16 md:py-20">
+    <h2 class="reveal font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight text-center">FAQs</h2>
+    <div class="mt-5 grid md:grid-cols-2 gap-x-10 gap-y-0 items-start stagger-grid" id="faqList">
+      <div>
+        <div class="faq2">
+          <button type="button" class="faq2-q" aria-expanded="false"><span class="faq2-t">Will my name be recognised?</span><span class="faq2-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq2-a"><div class="faq2-a-in">Yes - unless you choose to stay anonymous. Recognition is given on donor walls and other forms of acknowledgement.</div></div>
+        </div>
+        <div class="faq2">
+          <button type="button" class="faq2-q" aria-expanded="false"><span class="faq2-t">Are donations tax-exempt?</span><span class="faq2-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq2-a"><div class="faq2-a-in">Yes. Donations are eligible for tax benefits under Section 80G in India. For alumni based in the US, contributions can be made through the IITK Foundation (USA), a registered 501(c)(3), making them eligible for US tax benefits. Benefits in the UK and Canada may also apply as per local regulations. <a href="https://iitk.ac.in/dora/annualgiving/testimonials/guidebook-donating-iitkfoundation.pdf" target="_blank" rel="noopener" class="text-brick font-semibold underline underline-offset-2">More details →</a></div></div>
+        </div>
+        <div class="faq2">
+          <button type="button" class="faq2-q" aria-expanded="false"><span class="faq2-t">When do I get a tax receipt?</span><span class="faq2-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq2-a"><div class="faq2-a-in">Within 4-5 working days via email. PAN is mandatory for an Indian 80G receipt.</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="faq2">
+          <button type="button" class="faq2-q" aria-expanded="false"><span class="faq2-t">Can I donate in installments?</span><span class="faq2-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq2-a"><div class="faq2-a-in">Yes. Monthly, quarterly and yearly options are all supported, with reminders.</div></div>
+        </div>
+        <div class="faq2">
+          <button type="button" class="faq2-q" aria-expanded="false"><span class="faq2-t">Can I donate from overseas?</span><span class="faq2-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq2-a"><div class="faq2-a-in">Yes - through IIT Kanpur's global partners. Tax benefits apply as per local laws.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-cocoa-900 text-white/80 relative overflow-hidden">
+  <img src="images/footer-art.png" alt="" aria-hidden="true" class="footer-art absolute right-0 bottom-0 w-[46%] max-w-[700px] pointer-events-none select-none hidden md:block">
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-12 pb-16 md:pt-14 md:pb-32 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-[72px] w-auto">
+      <p class="mt-4 max-w-xs leading-relaxed">Office of the Dean of Resources &amp; Alumni (DoRA), Indian Institute of Technology Kanpur, Kanpur &ndash; 208016, Uttar Pradesh, India.</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Quick links</p>
+      <ul class="space-y-2">
+        <li><a href="#about" class="hover:text-white">About the Scholarship</a></li>
+        <li><a href="#eligibility" class="hover:text-white">Eligibility &amp; Selection</a></li>
+        <li><a href="testimonials.html" class="hover:text-white">Stories &amp; Voices</a></li>
+        <li><a href="#donate" class="hover:text-white">Donate</a></li>
+        <li><a href="#faqs" class="hover:text-white">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Contact</p>
+      <ul class="space-y-2">
+        <li><a href="mailto:dora_desk@iitk.ac.in" class="hover:text-white">dora_desk@iitk.ac.in</a></li>
+        <li>+91 512 679 7289</li>
+        <li><a href="https://iitk.ac.in/dora/" target="_blank" rel="noopener" class="hover:text-white">iitk.ac.in/dora</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 text-center text-xs py-5">&copy; 2026 Indian Institute of Technology Kanpur. All rights reserved.</div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div id="stickyCta" class="md:hidden fixed bottom-0 inset-x-0 z-30 p-3 bg-cream-50/95 backdrop-blur border-t border-cream-300 translate-y-full transition-transform duration-300">
+  <button data-open-donate class="btn-primary w-full py-3.5 rounded-xl font-semibold">Contribute Now →</button>
+</div>
+
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-cocoa text-white text-sm px-5 py-3 rounded-full shadow-lift opacity-0 pointer-events-none">Link copied</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fmtIN = n => '₹' + Number(n).toLocaleString('en-IN');
+
+/* ---------- NAV ---------- */
+const nav = document.getElementById('nav');
+const setNav = () => {
+  const s = window.scrollY > 40;
+  nav.classList.toggle('nav-scrolled', s);
+};
+setNav(); window.addEventListener('scroll', setNav, {passive:true});
+document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
+document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')));
+
+/* ---------- HERO INTRO ---------- */
+if (!reduce) {
+  gsap.timeline({defaults:{ease:'power3.out'}})
+    .from('#heroImg', {scale:1.15, duration:1.6, ease:'power2.out'}, 0)
+    .from('.hero-el', {y:30, opacity:0, duration:.9, stagger:.12}, .2)
+    
+    ;
+  gsap.from('#nav', {y:-20, opacity:0, duration:.6, delay:.3, clearProps:'all'});
+  gsap.to('#heroImg', {yPercent:12, ease:'none', scrollTrigger:{trigger:'#top', start:'top top', end:'bottom top', scrub:true}});
+  gsap.fromTo('#journeyImg', {yPercent:-15}, {yPercent:0, ease:'none', scrollTrigger:{trigger:'#journey', start:'top bottom', end:'bottom top', scrub:true}});
+}
+
+/* ---------- SCROLL REVEALS ---------- */
+gsap.utils.toArray('.reveal').forEach(el => {
+  if (reduce) { el.style.opacity = 1; return; }
+  gsap.fromTo(el, {y:28, opacity:0}, {y:0, opacity:1, duration:.9, ease:'power3.out', clearProps:'transform', scrollTrigger:{trigger:el, start:'top 88%', once:true}});
+});
+gsap.utils.toArray('.stagger-list').forEach(list => {
+  if (reduce) return;
+  gsap.from(list.children, {x:-16, opacity:0, duration:.6, stagger:.1, ease:'power2.out', scrollTrigger:{trigger:list, start:'top 85%', once:true}});
+});
+gsap.utils.toArray('.parallax-slow').forEach(el => {
+  if (reduce) return;
+  gsap.to(el, {yPercent:-14, rotate:6, ease:'none', scrollTrigger:{trigger:el, start:'top bottom', end:'bottom top', scrub:1}});
+});
+gsap.utils.toArray('.img-zoom img').forEach(img => {
+  if (reduce) return;
+  gsap.fromTo(img, {scale:1.15}, {scale:1, ease:'none', scrollTrigger:{trigger:img, start:'top bottom', end:'bottom top', scrub:1}});
+});
+if (!reduce) gsap.to('.plane', {x:10, y:-6, rotate:-4, duration:2.4, yoyo:true, repeat:-1, ease:'sine.inOut'});
+
+/* ---------- COUNTERS + PROGRESS ---------- */
+document.querySelectorAll('.counter').forEach(el => {
+  const to = +el.dataset.to, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+  const o = {v:0};
+  ScrollTrigger.create({trigger:el, start:'top 90%', once:true, onEnter(){
+    if (reduce) { el.textContent = pre + to + suf; return; }
+    gsap.to(o, {v:to, duration:1.6, ease:'power2.out', onUpdate(){ el.textContent = pre + Math.round(o.v) + suf; }});
+  }});
+});
+const bar = document.getElementById('progressBar'), pctLbl = document.getElementById('progressLabel');
+ScrollTrigger.create({trigger:bar, start:'top 92%', once:true, onEnter(){
+  const p = {v:0};
+  gsap.to(p, {v:+bar.dataset.pct, duration:reduce?0:1.8, ease:'power3.out', onUpdate(){ bar.style.width = p.v + '%'; pctLbl.textContent = Math.round(p.v) + '%'; }});
+}});
+
+/* ---------- CARD HOVER (magnetic tilt) ---------- */
+if (window.matchMedia('(hover:hover)').matches && !reduce) {
+  document.querySelectorAll('.card-hover').forEach(card => {
+    const rx = gsap.quickTo(card, 'rotationX', {duration:.4, ease:'power3', overwrite:false}), ry = gsap.quickTo(card, 'rotationY', {duration:.4, ease:'power3', overwrite:false});
+    gsap.set(card, {transformPerspective:900});
+    card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); card.style.setProperty('--mx', (e.clientX - r.left)+'px'); card.style.setProperty('--my', (e.clientY - r.top)+'px'); ry(((e.clientX - r.left)/r.width - .5) * 6); rx(-((e.clientY - r.top)/r.height - .5) * 6); });
+    card.addEventListener('mouseleave', () => { rx(0); ry(0); });
+  });
+}
+
+/* ---------- ELIGIBILITY CARDS: GSAP hover ---------- */
+document.querySelectorAll('.elig-card').forEach(card => {
+  const icon = card.querySelector('.elig-icon'), checks = card.querySelectorAll('.elig-check'), title = card.querySelector('.elig-title');
+  gsap.set(card, {transformPerspective:1000});
+  const rx = gsap.quickTo(card, 'rotationX', {duration:.5, ease:'power3', overwrite:false}), ry = gsap.quickTo(card, 'rotationY', {duration:.5, ease:'power3', overwrite:false});
+  card.addEventListener('mouseenter', () => {
+    card.classList.add('is-hover');
+    if (reduce) return;
+    gsap.to(card, {y:-10, boxShadow:'0 32px 60px -24px rgba(58,33,24,.38)', duration:.45, ease:'power3.out'});
+    gsap.fromTo(icon, {rotate:-8, scale:.9}, {rotate:0, scale:1.12, duration:.6, ease:'back.out(2.5)'});
+    gsap.fromTo(checks, {scale:.6, rotate:-90}, {scale:1, rotate:0, duration:.4, stagger:.06, ease:'back.out(3)'});
+    gsap.to(title, {x:4, color:'#A83E24', duration:.35, ease:'power2.out'});
+  });
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', (e.clientX - r.left)+'px'); card.style.setProperty('--my', (e.clientY - r.top)+'px');
+    if (reduce) return;
+    ry(((e.clientX - r.left)/r.width - .5) * 7); rx(-((e.clientY - r.top)/r.height - .5) * 7);
+  });
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('is-hover');
+    if (reduce) return;
+    rx(0); ry(0);
+    gsap.to(card, {y:0, boxShadow:'0 10px 30px -18px rgba(58,33,24,.18)', duration:.5, ease:'power3.out'});
+    gsap.to(icon, {scale:1, rotate:0, duration:.4, ease:'power2.out'});
+    gsap.to(title, {x:0, color:'#3A2118', duration:.35});
+  });
+});
+
+
+/* ---------- TOUCH DEVICES: tap feedback instead of hover ---------- */
+if (!window.matchMedia('(hover:hover)').matches) {
+  document.querySelectorAll('.card-hover, .elig-card, .diff-card, .faq2').forEach(card => {
+    card.addEventListener('touchstart', () => { card.classList.add('is-touch'); if (card.classList.contains('elig-card')) card.classList.add('is-hover'); }, {passive:true});
+    ['touchend','touchcancel'].forEach(ev => card.addEventListener(ev, () => setTimeout(() => { card.classList.remove('is-touch'); card.classList.remove('is-hover'); }, 350), {passive:true}));
+  });
+}
+
+/* ---------- GSAP: staggered grids, headings, buttons ---------- */
+gsap.utils.toArray('.stagger-grid').forEach(grid => {
+  if (reduce) return;
+  gsap.from(grid.children, {y:40, opacity:0, duration:.8, stagger:.14, ease:'power3.out', scrollTrigger:{trigger:grid, start:'top 85%', once:true}});
+});
+gsap.utils.toArray('h2.font-display, h2.h-sec').forEach(h => {
+  if (reduce || h.closest('.reveal')) return;
+  gsap.from(h, {y:24, opacity:0, duration:.8, ease:'power3.out', scrollTrigger:{trigger:h, start:'top 90%', once:true}});
+});
+if (window.matchMedia('(hover:hover)').matches && !reduce) {
+  document.querySelectorAll('.btn-primary, .btn-outline, .btn-next, .btn-prev').forEach(b => {
+    b.addEventListener('mouseenter', () => gsap.to(b, {scale:1.04, duration:.3, ease:'power2.out'}));
+    b.addEventListener('mouseleave', () => gsap.to(b, {scale:1, duration:.3, ease:'power2.out'}));
+  });
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.addEventListener('mouseenter', () => gsap.fromTo(a, {y:0}, {y:-2, duration:.25, ease:'power2.out'}));
+    a.addEventListener('mouseleave', () => gsap.to(a, {y:0, duration:.25}));
+  });
+}
+
+/* ===== Donation form: copied from the DoRA Pioneering Award page (index.php) ===== */
+
+        // Updated Payment Partner Links with separate monthly and one-time links
+        const paymentLinks = {
+            'usa': {
+                'monthly': 'https://www.zeffy.com/en-US/donation-form/bb809edf-3a48-4fec-931b-18fcbee7da40',
+                'one-time': 'https://iitk.ac.in/dora/givingback/donate-now-usd/Annual-Gift-Programme'
+            },
+            'uk': {
+                'monthly': 'https://www.justgiving.com/charity/eff-iitkanpur',
+                'one-time': 'https://www.justgiving.com/charity/eff-iitkanpur'
+            },
+            'australia': {
+                'monthly': 'https://myriadau.fcsuite.com/erp/donate/create/fund?funit_id=1128',
+                'one-time': 'https://myriadau.fcsuite.com/erp/donate/create/fund?funit_id=1128'
+            },
+            'belgium': {
+                'monthly': 'https://donate.kbs-frb.be/actions/EFF-IITKanpurUniversity',
+                'one-time': 'https://donate.kbs-frb.be/actions/EFF-IITKanpurUniversity'
+            },
+            'canada': {
+                'monthly': 'https://www.canadahelps.org/en/charities/myriad-canada/campaign/h502-support-education-research-and-access-to-healthcare-with-the-iit-kanpur/#create-a-campaign',
+                'one-time': 'https://www.myriadcanada.org/en/project/support-education-research-healthcare-iit-kanpur/'
+            },
+            'germany': {
+                'monthly': 'https://donate.transnationalgiving.eu/germany/IITKanpur',
+                'one-time': 'https://donate.transnationalgiving.eu/germany/IITKanpur'
+            },
+            'other': {
+                'monthly': 'https://iitk.ac.in/dora/givingback/other-country/Annual-Gift-Programme',
+                'one-time': 'https://iitk.ac.in/dora/givingback/other-country/Annual-Gift-Programme'
+            }
+        };
+
+        // Payment Modal Functions
+        function openPaymentModal(country, countryName, countryIcon, donationType) {
+            const modal = document.getElementById('paymentModal');
+            const modalCountryIcon = document.getElementById('modalCountryIcon');
+            const modalCountryName = document.getElementById('modalCountryName');
+            const modalDonationType = document.getElementById('modalDonationType');
+            const modalContent = document.getElementById('modalContent');
+            const proceedButton = document.getElementById('proceedButton');
+
+            let content = '';
+            let paymentLink = '';
+            
+            // Set the icon and name
+            modalCountryIcon.textContent = countryIcon;
+            modalCountryName.textContent = countryName;
+            
+            // Set donation type text if monthly
+            // Decide payment link only (NO title text)
+if (donationType === 'monthly') {
+    paymentLink = paymentLinks[country]?.monthly || paymentLinks['other'].monthly;
+} else {
+    paymentLink = paymentLinks[country]?.['one-time'] || paymentLinks['other']['one-time'];
+}
+
+            
+            switch (country) {
+                case 'usa':
+                    if (donationType === 'monthly') {
+                        content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>Enter amount: $15 / $30 / $60 / $120.</li><li>Enter amount and complete payment</li></ol></div>`;
+                    } else {
+                        content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>Enter amount: $15 / $30 / $60 / $120.</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    }
+                    break;
+                case 'uk':
+                    content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>${donationType === 'monthly' ? 'Select "Monthly" Option' : 'Select Donation Type'}</li><li>Enter amount: £30 / £50 / £150 / £200.</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    break;
+                case 'australia':
+                    content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>${donationType === 'monthly' ? 'Select "Recurring Donation Amount"' : 'Select Donation Type'}</li><li>Enter amount${donationType === 'monthly' ? ' and End date' : ''}.</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    break;
+                case 'canada':
+                    if (donationType === 'monthly') {
+                        content = `<div class="payment-steps"><h4>Steps:</h4><ol><li> Select "Donate Monthly"</li><li>   Enter amount</li><li>Enter your details and Complete Payment
+
+</li></ol></div>`;
+                    } else {
+                        content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>Select Donation Type</li><li>Enter amount</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    }
+                    break;
+                case 'germany':
+                    content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>${donationType === 'monthly' ? 'Select "Donate every month"' : 'Select Donation Type'}</li><li>Enter amount: €50 / €80 / €100 / €250.</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    break;
+                case 'belgium':
+                    content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>${donationType === 'monthly' ? 'Select "Don Mensuel/ I Donate every month"' : 'Select Donation Type'}</li><li>Enter Amount</li><li>Enter your details and Complete Payment</li></ol></div>`;
+                    break;
+                default:
+                    content = `<div class="payment-steps"><h4>Steps:</h4><ol><li>Monthly giving is currently unavailable in other countries.</li><li> At this time, we accept one-time donations only.</li></ol></div>`;
+                    break;
+            }
+
+            modalContent.innerHTML = content;
+            proceedButton.href = paymentLink;
+            modal.style.display = 'flex';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('paymentModal');
+            if (event.target == modal) closePaymentModal();
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closePaymentModal();
+        });
+
+        // Tab switching function
+        function switchTab(step) {
+            document.querySelectorAll('.form-step').forEach(stepDiv => stepDiv.classList.remove('active'));
+            const el = document.getElementById('step' + step); el.classList.add('active');
+            if (window.gsap && !reduce) gsap.fromTo(el, {y:16, opacity:0}, {y:0, opacity:1, duration:.45, ease:'power3.out'});
+            document.getElementById('donate').scrollIntoView({behavior:'smooth',block:'nearest'});
+
+            if (step === 2) updateStep2DonationDisplay();
+        }
+
+        // Function to update donation display in step 2
+        function updateStep2DonationDisplay() {
+            const selectedAmount = getSelectedAmount();
+            const selectedType = getSelectedType();
+
+            if (selectedAmount) {
+                document.getElementById('step2AmountDisplay').textContent = '₹' + selectedAmount;
+                document.getElementById('step2TypeDisplay').textContent = selectedType === 'monthly' ? 'Monthly' : 'One-time';
+            }
+        }
+
+        // Function to get selected amount (India only)
+        function getSelectedAmount() {
+            const selectedOption = document.querySelector('.amount-option.selected');
+            if (selectedOption) return selectedOption.getAttribute('data-amount');
+
+            const isMonthly = getSelectedType() === 'monthly';
+            const customAmount = isMonthly ?
+                document.getElementById('monthly-customAmountInput').value :
+                document.getElementById('onetime-customAmountInput').value;
+            const otherBox = isMonthly ?
+                document.getElementById('monthly-other-option-box') :
+                document.getElementById('onetime-other-option-box');
+
+            if (customAmount && otherBox.classList.contains('selected')) return customAmount;
+
+            return null;
+        }
+
+        // Function to get selected type
+        function getSelectedType() {
+            // Check if India content is visible
+            if (document.getElementById('india-content').style.display !== 'none') {
+                const activeOption = document.querySelector('#india-content .donation-type-option.active');
+                return activeOption ? activeOption.getAttribute('data-type') : 'one-time';
+            } else {
+                // For other countries
+                const activeOption = document.querySelector('#other-country-content .donation-type-option.active');
+                return activeOption ? activeOption.getAttribute('data-type') : 'one-time';
+            }
+        }
+
+        // Function to update donation display (India only)
+        function updateDonationDisplay() {
+            const selectedAmount = getSelectedAmount();
+            const selectedType = getSelectedType();
+            const displayElement = document.getElementById('selectedDonationDisplay');
+
+            if (selectedAmount) {
+                document.getElementById('selectedAmountDisplay').textContent = '₹' + selectedAmount;
+                document.getElementById('selectedTypeDisplay').textContent = selectedType === 'monthly' ? 'Monthly' : 'One-time';
+                displayElement.classList.add('show');
+            } else {
+                displayElement.classList.remove('show');
+            }
+        }
+
+        // Function to switch amount options based on donation type (India only)
+        function switchAmountOptions(donationType) {
+            const monthlyAmounts = document.getElementById('monthly-amounts');
+            const onetimeAmounts = document.getElementById('onetime-amounts');
+
+            if (donationType === 'monthly') {
+                monthlyAmounts.style.display = 'grid';
+                onetimeAmounts.style.display = 'none';
+            } else {
+                monthlyAmounts.style.display = 'none';
+                onetimeAmounts.style.display = 'grid';
+            }
+
+            // Clear selections
+            document.querySelectorAll('.amount-option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelectorAll('.other-option-box').forEach(box => {
+                box.classList.remove('selected');
+                const input = box.querySelector('input');
+                if (input) input.value = '';
+            });
+
+            updateDonationDisplay();
+        }
+
+        // Form Validation Function - ADDED VALIDATION CODE
+        function validateForm() {
+            // Get affiliation value
+            const affiliationSelected = document.querySelector('.affiliation-dropdown .dropdown-selected');
+            const affiliationValue = affiliationSelected.getAttribute('data-value') || affiliationSelected.textContent;
+
+            // Check if affiliation is selected
+            if (!affiliationValue || affiliationValue === "Affiliation *") {
+                alert('Please select your affiliation (Alumni/Non-Alumni/Organization)');
+                return false;
+            }
+
+            // If alumni is selected, validate program and YOG
+            if (affiliationValue === "alumni") {
+                const programSelected = document.querySelector('.program-dropdown .dropdown-selected');
+                const programValue = programSelected.getAttribute('data-value') || programSelected.textContent;
+                
+                const yogSelected = document.querySelector('.yog-dropdown .dropdown-selected');
+                const yogValue = yogSelected.getAttribute('data-value') || yogSelected.textContent;
+                
+                if (!programValue || programValue === "Select Program *") {
+                    alert('Please select your program');
+                    return false;
+                }
+                
+                if (!yogValue || yogValue === "Year of Graduation *") {
+                    alert('Please select your year of graduation');
+                    return false;
+                }
+            }
+
+            // Basic field validations
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+           const phone = document.getElementById('phone').value.trim();
+
+            if (!name || name.trim() === '') {
+                alert('Please enter your full name');
+                return false;
+            }
+
+            if (!email || email.trim() === '') {
+                alert('Please enter your email');
+                return false;
+            }
+
+            // Simple email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+          if (phone === '') {
+    alert('Please enter mobile number');
+    return false;
+}
+
+// Allow + and numbers only
+const phoneRegex = /^\+?[0-9]{7,15}$/;
+
+if (!phoneRegex.test(phone)) {
+    alert('Please enter valid mobile number (only numbers and optional + country code)');
+    return false;
+}
+
+            // PAN validation (optional but must be valid if entered)
+            const panInput = document.getElementById('panInput');
+            const pan = panInput.value.trim().toUpperCase();
+            const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+
+            if (pan !== "" && !panRegex.test(pan)) {
+                alert("Invalid PAN number.\nFormat: ABCDE1234F");
+                panInput.focus();
+                return false;
+            }
+
+            // Donation amount validation
+            const donationAmount = getSelectedAmount();
+            if (!donationAmount || donationAmount <= 0) {
+                alert('Please select a valid donation amount');
+                return false;
+            }
+
+            // Check if donation amount is not greater than 5 lakhs
+            if (parseInt(donationAmount) > 500000) {
+                alert('Amount should not be greater than 5 Lakhs');
+                return false;
+            }
+
+            // Set hidden form values
+            document.getElementById("amount").value = donationAmount;
+            document.getElementById("donationtime").value = getSelectedType();
+            document.getElementById("countryInput").value = "India";
+            document.getElementById("currency").value = "inr";
+            document.getElementById("select_category").value = affiliationValue;
+
+            // Set program and YOG values if alumni
+            if (affiliationValue === "alumni") {
+                const programSelected = document.querySelector('.program-dropdown .dropdown-selected');
+                const programValue = programSelected.getAttribute('data-value') || programSelected.textContent;
+                
+                const yogSelected = document.querySelector('.yog-dropdown .dropdown-selected');
+                const yogValue = yogSelected.getAttribute('data-value') || yogSelected.textContent;
+                
+                document.getElementById("program").value = programValue;
+                document.getElementById("Year_of_Graduation").value = yogValue;
+            } else {
+                document.getElementById("program").value = "";
+                document.getElementById("Year_of_Graduation").value = "";
+            }
+
+            return true;
+        }
+
+        // Initialize when DOM is loaded
+        (function () {
+            // Country selection logic
+            const countryDropdown = document.querySelector('.country-dropdown');
+            const countrySelected = countryDropdown.querySelector('.dropdown-selected');
+            const countryOptions = countryDropdown.querySelectorAll('.option');
+            const indiaContent = document.getElementById('india-content');
+            const otherCountryContent = document.getElementById('other-country-content');
+            const globalNote = document.getElementById('global-note');
+            const nextButton = document.getElementById('nextButton');
+
+            let selectedCountry = 'india'; // Default is India
+            let selectedCountryIcon = '🇮🇳';
+            let selectedCountryName = 'India';
+
+            countrySelected.addEventListener('click', function () {
+                countryDropdown.classList.toggle('active');
+            });
+
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    const value = this.getAttribute('data-value');
+                    const countryCode = this.getAttribute('data-country-code');
+                    const icon = this.querySelector('.flag').textContent;
+                    const name = this.textContent.trim().replace(/^\S+\s*/, '');
+
+                    // Update selected country display
+                    countrySelected.innerHTML = `<span class="flag">${icon}</span> ${name}`;
+                    countrySelected.setAttribute('data-value', value);
+                    countrySelected.setAttribute('data-icon', icon);
+                    countrySelected.setAttribute('data-name', name);
+                    countryDropdown.classList.remove('active');
+                    
+                    // Store selected country info
+                    selectedCountry = value;
+                    selectedCountryIcon = icon;
+                    selectedCountryName = name;
+                    
+                    // Show/hide content based on country selection
+                    if (value === 'india') {
+                        indiaContent.style.display = 'block';
+                        otherCountryContent.style.display = 'none';
+                        
+                        nextButton.textContent = 'Next →';
+                    } else {
+                        indiaContent.style.display = 'none';
+                        otherCountryContent.style.display = 'block';
+                        
+                        nextButton.textContent = 'Proceed to Payment';
+                    }
+                });
+            });
+
+            // Donation type toggle for India
+            const donationTypeOptionsIndia = document.querySelectorAll('#india-content .donation-type-option');
+            donationTypeOptionsIndia.forEach(option => {
+                option.addEventListener('click', function () {
+                    const container = this.closest('.donation-type-toggle');
+                    container.querySelectorAll('.donation-type-option').forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    switchAmountOptions(this.getAttribute('data-type'));
+                });
+            });
+
+            // Donation type toggle for other countries
+            const donationTypeOptionsOther = document.querySelectorAll('#other-country-content .donation-type-option');
+            donationTypeOptionsOther.forEach(option => {
+                option.addEventListener('click', function () {
+                    const container = this.closest('.donation-type-toggle');
+                    container.querySelectorAll('.donation-type-option').forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Initialize amount selection for both types (India only)
+            function initializeAmountSelection(amountContainerId, otherBoxId, customInputId) {
+                const amountContainer = document.getElementById(amountContainerId);
+                if (!amountContainer) return;
+
+                const amountOptions = amountContainer.querySelectorAll('.amount-option');
+                const otherOptionBox = document.getElementById(otherBoxId);
+                const customAmountInput = document.getElementById(customInputId);
+
+                amountOptions.forEach(option => {
+                    option.addEventListener('click', function () {
+                        amountOptions.forEach(opt => opt.classList.remove('selected'));
+                        this.classList.add('selected');
+                        if (window.gsap) gsap.fromTo(this, {scale:.93}, {scale:1, duration:.35, ease:'back.out(3)'});
+                        otherOptionBox.classList.remove('selected');
+                        customAmountInput.value = '';
+                        updateDonationDisplay();
+                    });
+                });
+
+                otherOptionBox.addEventListener('click', function () {
+                    amountOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    customAmountInput.focus();
+                    updateDonationDisplay();
+                });
+
+                customAmountInput.addEventListener('input', function () {
+                    if (this.value) {
+                        amountOptions.forEach(opt => opt.classList.remove('selected'));
+                        otherOptionBox.classList.add('selected');
+                        updateDonationDisplay();
+                    } else if (otherOptionBox.classList.contains('selected')) {
+                        document.getElementById('selectedDonationDisplay').classList.remove('show');
+                    }
+                });
+            }
+
+            // Initialize both sets of amount options (India only)
+            initializeAmountSelection('monthly-amounts', 'monthly-other-option-box', 'monthly-customAmountInput');
+            initializeAmountSelection('onetime-amounts', 'onetime-other-option-box', 'onetime-customAmountInput');
+
+            // Next button functionality - CORRECT LOGIC
+            nextButton.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Check if country is selected
+                if (!selectedCountry) {
+                    alert('Please select your country');
+                    return;
+                }
+
+                if (selectedCountry === 'india') {
+                    // For India: validate amount and go to step 2
+                    const selectedAmount = getSelectedAmount();
+                    if (!selectedAmount) {
+                        alert('Please select or enter a donation amount');
+                        return;
+                    }
+                    
+                    updateStep2DonationDisplay();
+                    switchTab(2);
+                } else {
+                    // For other countries: check the selected donation type
+                    const selectedType = getSelectedType();
+
+                    if (selectedType === 'monthly') {
+                        // Open modal for monthly donation
+                        openPaymentModal(selectedCountry, selectedCountryName, selectedCountryIcon, 'monthly');
+                    } else {
+                        // For one-time donation, directly open the payment link
+                        let paymentLink = paymentLinks[selectedCountry]?.['one-time'];
+                        if (!paymentLink) {
+                            paymentLink = paymentLinks['other']['one-time'];
+                        }
+                        window.open(paymentLink, '_blank');
+                    }
+                }
+            });
+
+            // Initialize Year of Graduation dropdown
+            const yogDropdown = document.querySelector('.yog-dropdown');
+            if (yogDropdown) {
+                const yogOptions = document.getElementById('yog-options');
+                const yogSelected = yogDropdown.querySelector('.dropdown-selected');
+
+                // Generate years from 1965 to current year
+                const currentYear = new Date().getFullYear();
+                for (let year = currentYear; year >= 1965; year--) {
+                    const option = document.createElement('div');
+                    option.className = 'option';
+                    option.textContent = year;
+                    option.setAttribute('data-value', year);
+                    yogOptions.appendChild(option);
+                }
+
+                // Toggle yog dropdown
+                yogSelected.addEventListener('click', function () {
+                    yogDropdown.classList.toggle('active');
+                });
+
+                // Select yog option
+                yogOptions.querySelectorAll('.option').forEach(option => {
+                    option.addEventListener('click', function () {
+                        yogSelected.textContent = this.textContent;
+                        yogSelected.setAttribute('data-value', this.getAttribute('data-value'));
+                        yogDropdown.classList.remove('active');
+                    });
+                });
+            }
+
+            // Affiliation dropdown functionality
+            const affiliationDropdown = document.querySelector('.affiliation-dropdown');
+            if (affiliationDropdown) {
+                const affiliationSelected = affiliationDropdown.querySelector('.dropdown-selected');
+                const alumniFields = document.getElementById('alumniFields');
+
+                affiliationSelected.addEventListener('click', function () {
+                    affiliationDropdown.classList.toggle('active');
+                });
+
+                affiliationDropdown.querySelectorAll('.option').forEach(option => {
+                    option.addEventListener('click', function () {
+                        affiliationSelected.textContent = this.textContent;
+                        affiliationSelected.setAttribute('data-value', this.getAttribute('data-value'));
+                        affiliationDropdown.classList.remove('active');
+
+                        // Show/hide alumni fields
+                        if (this.getAttribute('data-value') === 'alumni') {
+                            alumniFields.style.display = 'block';
+                        } else {
+                            alumniFields.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // Other dropdown functionalities
+            const otherDropdowns = document.querySelectorAll('.dropdown:not(.country-dropdown):not(.yog-dropdown):not(.affiliation-dropdown)');
+            otherDropdowns.forEach(dropdown => {
+                const selected = dropdown.querySelector('.dropdown-selected');
+                const options = dropdown.querySelector('.dropdown-options');
+
+                if (selected && options) {
+                    selected.addEventListener('click', function () {
+                        dropdown.classList.toggle('active');
+                    });
+
+                    options.querySelectorAll('.option').forEach(option => {
+                        option.addEventListener('click', function () {
+                            selected.textContent = this.textContent;
+                            selected.setAttribute('data-value', this.getAttribute('data-value') || this.textContent);
+                            dropdown.classList.remove('active');
+                        });
+                    });
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+
+            // Mobile donate button functionality
+            const mobileDonateBtn = document.getElementById('mobileDonateBtn');
+            if (mobileDonateBtn) {
+                mobileDonateBtn.addEventListener('click', function() {
+                    document.getElementById('donate').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        })();
+
+/* FAQ accordion */
+document.querySelectorAll('.faq2 .faq2-q').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.parentElement;const open=f.classList.contains('open');document.querySelectorAll('.faq2').forEach(x=>{x.classList.remove('open');x.querySelector('.faq2-q').setAttribute('aria-expanded','false');});if(!open){f.classList.add('open');btn.setAttribute('aria-expanded','true');}}));
+
+/* Contribute buttons -> scroll to the form in the banner */
+document.querySelectorAll('[data-open-donate]').forEach(b=>b.addEventListener('click',()=>{if(!document.getElementById('step1').classList.contains('active'))switchTab(1);document.getElementById('donate').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}));
+
+/* ---------- STICKY MOBILE CTA ---------- */
+ScrollTrigger.create({trigger:'#donate', start:'bottom top', endTrigger:'#faqs', end:'bottom bottom',
+  onToggle(self){ document.getElementById('stickyCta').classList.toggle('translate-y-full', !self.isActive); }});
+</script>
+</body>
+</html>

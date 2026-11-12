@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stories &amp; Voices | Alumni Scholarship for Girl Students | IIT Kanpur</title>
+<meta name="description" content="Hear from the scholarship recipients and the alumni donors behind IIT Kanpur's Alumni Scholarship for Girl Students.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: { DEFAULT: '#F7F1E8', 50: '#FCF9F4', 100: '#F7F1E8', 200: '#EFE4D6', 300: '#E6D6C3' },
+        brick: { DEFAULT: '#A83E24', 600: '#A83E24', 700: '#8F3219', 800: '#6E2611' },
+        cocoa: { DEFAULT: '#3A2118', 900: '#2A1710' },
+        ochre: { DEFAULT: '#B9873B', 500: '#B9873B', 600: '#9E7130' },
+        clay: { DEFAULT: '#EBC8B6', 100: '#F4E2D6', 200: '#EBC8B6', 300: '#DFAB92' },
+        ink: '#4A3A33'
+      },
+      fontFamily: {
+        display: ['Lato', 'system-ui', 'sans-serif'],
+        sans: ['Lato', 'system-ui', 'sans-serif']
+      },
+      boxShadow: {
+        card: '0 10px 30px -12px rgba(58,33,24,.18)',
+        lift: '0 24px 50px -20px rgba(58,33,24,.35)'
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px); }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { background:#F7F1E8; color:#4A3A33; -webkit-font-smoothing:antialiased; }
+  .font-display { letter-spacing:-.01em; }
+  .btn-primary { background:#A83E24; color:#fff; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .btn-primary:hover { background:#8F3219; box-shadow:0 14px 28px -12px rgba(168,62,36,.6); transform: translateY(-2px); }
+  .btn-outline { border:1.5px solid #A83E24; color:#A83E24; transition: all .25s ease; }
+  .btn-outline:hover { background:#A83E24; color:#fff; }
+  .amount-chip { border:1.5px solid #E6D6C3; background:#fff; transition: all .22s ease; }
+  .amount-chip:hover { border-color:#B9873B; transform: translateY(-2px); box-shadow:0 10px 20px -12px rgba(185,135,59,.5); }
+  .amount-chip.active { border-color:#A83E24; background:#FBEDE4; color:#A83E24; }
+  .seg { transition: all .3s cubic-bezier(.4,0,.2,1); }
+  .seg.active { background:#3A2118; color:#fff; }
+  .card-hover { position:relative; overflow:hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease, background .35s ease; will-change: transform; }
+  .card-hover::before { content:""; position:absolute; left:0; right:0; top:0; height:4px; background: linear-gradient(90deg,#A83E24,#B9873B); transform: scaleX(0); transform-origin:left; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .card-hover::after { content:""; position:absolute; inset:0; background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(185,135,59,.12), transparent 45%); opacity:0; transition: opacity .35s; pointer-events:none; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 28px 56px -22px rgba(58,33,24,.38); border-color:#DFAB92; }
+  .card-hover:hover::before { transform: scaleX(1); }
+  .card-hover:hover::after { opacity:1; }
+  .card-hover h3, .card-hover img { transition: color .3s, transform .5s cubic-bezier(.2,.8,.2,1); }
+  .card-hover:hover h3 { color:#A83E24; }
+  .card-hover:hover img { transform: scale(1.04); }
+  .elig-card { position:relative; background:#fff; border:1px solid #EFE4D6; border-left:5px solid; border-radius:18px; padding:28px 28px 26px; box-shadow:0 10px 30px -18px rgba(58,33,24,.18); transform-style:preserve-3d; will-change:transform; }
+  .elig-card.brick { border-left-color:#A83E24; } .elig-card.clay { border-left-color:#DFAB92; } .elig-card.ochre { border-left-color:#B9873B; }
+  .elig-head { display:flex; align-items:center; gap:16px; padding-bottom:18px; border-bottom:1px solid #EFE4D6; }
+  .elig-icon { width:62px; height:62px; border-radius:50%; flex:0 0 auto; display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 12px 24px -12px rgba(58,33,24,.5); }
+  .brick .elig-icon { background:linear-gradient(140deg,#B9503A,#A83E24); } .clay .elig-icon { background:linear-gradient(140deg,#E8B69E,#D99C82); } .ochre .elig-icon { background:linear-gradient(140deg,#C9A05A,#B9873B); }
+  .elig-title { font-size:1.35rem; font-weight:700; color:#3A2118; line-height:1.2; }
+  .elig-sub { font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:4px; }
+  .brick .elig-sub { color:#A83E24; } .clay .elig-sub { color:#D08A6C; } .ochre .elig-sub { color:#B9873B; }
+  .elig-list { margin-top:18px; display:flex; flex-direction:column; gap:12px; font-size:15px; line-height:1.55; color:#4A3A33; }
+  .elig-list strong { color:#3A2118; font-weight:700; }
+  .elig-check { width:26px; height:26px; border-radius:50%; flex:0 0 auto; display:flex; align-items:center; justify-content:center; margin-top:1px; transition: transform .3s, background .3s, color .3s; }
+  .brick-check { background:#F4E2D6; color:#A83E24; } .clay-check { background:#F7E6DE; color:#D08A6C; } .ochre-check { background:#F3E9D2; color:#B9873B; }
+  .elig-card.is-hover .brick-check { background:#A83E24; color:#fff; } .elig-card.is-hover .clay-check { background:#D99C82; color:#fff; } .elig-card.is-hover .ochre-check { background:#B9873B; color:#fff; }
+  .elig-card::after { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background: radial-gradient(500px circle at var(--mx,50%) var(--my,50%), rgba(185,135,59,.10), transparent 45%); opacity:0; transition:opacity .3s; }
+  .elig-card.is-hover::after { opacity:1; }
+  .diff-card { border:1px solid rgba(255,255,255,.12); box-shadow:0 18px 40px -22px rgba(58,33,24,.45); }
+  .diff-soft { background: linear-gradient(135deg,#9E3E27,#7E2F1C); }
+  .diff-deep { background: linear-gradient(135deg,#9E3E27,#7E2F1C); }
+  .diff-card:hover { border-color: rgba(255,255,255,.12); }
+  .diff-card::before, .diff-card::after { display:none; }
+  .form-eyebrow { display:inline-block; font-size:.74rem; font-weight:900; letter-spacing:.16em; text-transform:uppercase; color:#B9873B; margin-bottom:8px; }
+  .progress-card { background: linear-gradient(150deg,#A83E24,#8F3219); box-shadow: 0 26px 54px -26px rgba(143,50,25,.7); }
+  #donate .donation-form-container { height:100%; }
+  .nav-link { position:relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#A83E24; transition:width .3s ease; }
+  .nav-link:hover::after { width:100%; }
+  .blob { border-radius: 62% 38% 55% 45% / 48% 60% 40% 52%; }
+  .blob-2 { border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%; }
+  .faq-answer { height:0; overflow:hidden; }
+  .faq-item[data-open="true"] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .3s ease; }
+  .reveal { opacity:0; }
+  input:focus, select:focus, textarea:focus { outline:none; border-color:#B9873B; box-shadow:0 0 0 4px rgba(185,135,59,.18); }
+  .field { border:1.5px solid #E6D6C3; background:#FCF9F4; transition: border-color .2s, box-shadow .2s; }
+  .progress-fill { background: linear-gradient(90deg,#A83E24,#B9873B); }
+  .grain { background-image: radial-gradient(rgba(168,62,36,.06) 1px, transparent 1px); background-size: 22px 22px; }
+  .quote-mark { font-family: 'Lato', sans-serif; font-size: 3.2rem; line-height: 1; color:#DFAB92; }
+  .btn-next { background: linear-gradient(135deg,#B9873B,#9E7130); transition: transform .25s, box-shadow .25s, filter .25s; }
+  .btn-next:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(158,113,48,.7); filter: brightness(1.05); }
+  .dot { width:10px;height:10px;border-radius:999px;background:#E6D6C3;transition:all .3s; }
+  .dot.active { background:#A83E24; width:28px; }
+  .dot.done { background:#B9873B; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1 !important; } * { scroll-behavior:auto !important; } }
+  /* ===== Donation form + FAQ: copied verbatim from the DoRA Pioneering Award page (css/style.css) ===== */
+  :root{--ink:#2A1410;--maroon:#421E18;--rust:#AB4531;--gold:#C9943A;--gold-deep:#B07E2C;--champagne:#FCE2C5;--cream:#FBF7F1;--cream-2:#F4EADD;--paper:#FFFFFF;--muted:rgba(42,20,16,.66);--line:rgba(66,30,24,.10);--shadow:0 22px 50px -30px rgba(66,30,24,.42);--radius:22px;}
+  .faqs .h-sec{text-align:center;color:#3A2118 !important;font-weight:700 !important}
+  .faqs .em{font-style:normal;color:var(--rust)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 22px 40px -14px rgba(176,126,44,.85);filter:brightness(1.04)}
+.btn:active{transform:translateY(0)}
+.btn .arrow{transition:transform .35s}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn-soft{background:var(--cream-2);color:var(--maroon);box-shadow:none}
+.btn-soft:hover{background:var(--champagne);filter:none;box-shadow:none;transform:translateY(-2px)}
+.ways-row{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:18px}
+.ways-link{display:inline-flex;align-items:center;gap:6px;padding:0;border:0;background:none;color:var(--rust);font-weight:600;font-size:.88rem}
+.ways-link span{color:var(--gold-deep)}
+.ways-link:hover{color:var(--gold-deep);text-decoration:underline}
+        /* ==========================================================
+           DONATION FORM DESIGN (matches reference screenshot)
+           Scoped to the backend-integrated form markup only.
+           ========================================================== */
+        /* Neutralize legacy Bootstrap-style wrapper classes so the card
+           fills the .donate-grid column exactly, instead of being capped
+           by an inherited .container max-width from the site stylesheet. */
+        .donate-grid { align-items: stretch; }
+        .donate-grid .container.hero-content,
+        .donate-grid .hero-form-container {
+            width: 100% !important;
+            max-width: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 100%;
+        }
+        .donation-form-container {
+            height: 100%;
+            box-sizing: border-box;
+            background: #ffffff;
+            border: 1px solid #f0e4d8;
+            border-radius: 18px;
+            padding: 36px;
+            box-shadow: 0 10px 40px rgba(139, 58, 38, 0.08);
+        }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+
+        .step-header { margin-bottom: 22px; text-align:center; }
+        .step-header h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #8a3826;
+            margin: 0 0 4px;
+        }
+        .step-header p {
+            font-family: 'Lato', sans-serif;
+            color: #8a7a6d;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Country select + generic dropdowns */
+        .country-select-container { margin-bottom: 20px; }
+        .country-select-label {
+            font-weight: 600;
+color: #3a2a1c;
+font-size: 0.92rem;
+margin-bottom: 8px;
+font-size: .78rem;
+font-weight: 700;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: #AB4531;
+margin: 22px 0 10px;
+display: block;
+text-align: left;
+        }
+        .required-star { color: #c0392b; }
+
+        .dropdown { position: relative; font-family: 'Lato', sans-serif; }
+        .dropdown-selected {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 16px;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            background: #fdfaf6;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #3a2a1c;
+        }
+        .dropdown-selected::after {
+            content: '▾';
+            margin-left: auto;
+            color: #8a7a6d;
+        }
+        .dropdown.active .dropdown-selected { border-color: #B04B34; }
+        .dropdown-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #e8ddd0;
+            border-radius: 10px;
+            box-shadow: 0 14px 34px rgba(0,0,0,.12);
+            max-height: 260px;
+            overflow-y: auto;
+            z-index: 45;
+        }
+        .dropdown.active .dropdown-options { display: block; }
+        .option {
+            padding: 11px 16px;
+            cursor: pointer;
+            font-size: 0.93rem;
+            color: #3a2a1c;
+            display: flex;
+            align-items: center;
+        }
+        .option:hover { background: #fbf1e6; }
+
+        /* Donation type toggle */
+        .donation-type-toggle {
+            display: flex;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 18px 0;
+        }
+        .donation-type-option {
+            flex: 1;
+            text-align: center;
+            padding: 13px 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #6b5b45;
+            background: #f2ece0;
+            cursor: pointer;
+            transition: 0.2s ease;
+            box-sizing: border-box;
+        }
+        .donation-type-option.active { background: #A83E24; color: #fff; }
+
+        /* Amount selection */
+        .amount-options-simple {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .other-option-box { grid-column: 1 / -1; }
+        .amount-option {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            border: 1.5px solid #e3d8c8;
+            border-radius: 10px;
+            padding: 10px 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: #3a2a1c;
+            background: #fff;
+            cursor: pointer;
+            transition: 0.15s ease;
+            padding: 15px;
+border: 1.5px solid var(--line);
+border-radius: 10px;
+background: var(--paper);
+font-family: 'Lato', sans-serif;
+font-size: 1.12rem;
+color: var(--maroon);
+cursor: pointer;
+transition: .3s;
+text-align: center;
+min-width: 0;
+white-space: nowrap;
+        }
+        .amount-option.selected { border-color: #c9974a; background: #f7e3ba; color: #7a4a12;
+background:#FCE2C5; }
+        .other-option-box {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            min-height: 50px;
+            border: 1.5px solid #e3d8c8;
+            border-radius: 10px;
+            padding: 0 10px;
+            background: #fff;
+            cursor: text;
+        }
+        .other-option-box.selected { border-color: #c9974a; background: #f7e3ba; }
+        .currency-symbol { color: #8a7a6d; margin-right: 4px; font-size: 0.92rem; }
+        .other-option-box input {
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            padding: 0 2px;
+            font-size: 0.92rem;
+            background: transparent;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Selected donation summary card */
+        .selected-donation-display {
+            display: none;
+            background: #fbf1e6;
+            border: 1px solid #f0d9bd;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 16px 0;
+        }
+        .selected-donation-display.show { display: block; }
+        .donation-summary { display: flex; align-items: center; justify-content: space-between; }
+        .donation-label {
+            font-size: 0.78rem;
+            color: #8a7a6d;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+            font-family: 'Lato', sans-serif;
+        }
+        .donation-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #8a3826;
+        }
+        .donation-type-badge {
+            background: #8a3826;
+            color: #fff;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Lato', sans-serif;
+            white-space: nowrap;
+        }
+
+        .info-note {
+            background: #fdf6ea;
+            border: 1px solid #f0e2c0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: #6b5b45;
+            margin: 14px 0;
+            font-family: 'Lato', sans-serif;
+        }
+        .info-note strong { color: #3a2a1c; }
+
+        /* Buttons */
+        .form-actions { display: flex; gap: 14px; margin-top: 24px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Lato', sans-serif;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease;
+            width: auto;
+            background: linear-gradient(120deg,var(--gold),var(--gold-deep));
+            color: #fff;
+            box-shadow: 0 14px 30px -12px rgba(176,126,44,.7);
+        }
+        .btn-next, .btn-submit {
+            background: linear-gradient(135deg, #cfa20c, #b8900a);
+            color: #fff;
+            flex: 1;
+        }
+        .btn-next:hover, .btn-submit:hover { background: linear-gradient(135deg, #b8900a, #a37f09); }
+        .btn-prev { background: #f2ece3; color: #6b5b45; flex: 1;background: #F4EADD;
+color: #6b5b45;
+flex: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: .6rem;
+font-family: 'Lato', sans-serif;
+font-weight: 600;
+font-size: .94rem;
+letter-spacing: .03em;
+padding: 17px 32px;
+border-radius: 10px;
+cursor: pointer;
+border: none; }
+        .btn-prev:hover { background: #ece3d5; }
+
+        /* Step 2 - personal info */
+        .section-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #8a3826;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0e4d8;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .form-row.mt-3 { margin-top: 14px; margin-bottom: 0; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 10px;
+            font-size: 0.93rem;
+            font-family: 'Lato', sans-serif;
+            color: #3a2a1c;
+            background: #fdfaf6;
+        }
+        .form-group input:focus { outline: none; border-color: #B04B34; background: #fff; }
+        .form-group input::placeholder { color: #a8998a; }
+
+        .pan-input-container { position: relative; }
+        .pan-tooltip-icon {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #e8ddd0;
+            color: #6b5b45;
+            font-size: 0.72rem;
+            font-weight: 700;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .pan-tooltip {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 38px;
+            background: #3a2a1c;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            width: 220px;
+            z-index: 20;
+            font-family: 'Lato', sans-serif;
+        }
+        .pan-input-container:hover .pan-tooltip { display: block; }
+
+        .conditional-field { margin-top: 4px; }
+
+        label.required {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #3a2a1c;
+        }
+        .radio-group { display: flex; gap: 24px; margin-top: 4px; }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.92rem;
+            color: #3a2a1c;
+        }
+        .radio-option input[type="radio"] { accent-color: #B04B34; width: 16px; height: 16px; }
+
+        .dnote, form + p.dnote {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.8rem;
+            color: #8a7a6d;
+            margin-top: 14px;
+            text-align: center;
+        }
+
+        /* Payment instructions modal (international donors) */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 20, 10, 0.55);
+            z-index: 9998;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .payment-modal-content {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 28px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .payment-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .payment-modal-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: #8a3826;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #8a7a6d;
+            cursor: pointer;
+        }
+        .payment-steps h4 { margin: 0 0 8px; color: #3a2a1c; font-family: 'Lato', sans-serif; }
+        .payment-steps ol { margin: 0; padding-left: 18px; color: #4a3c2c; font-size: 0.92rem; }
+        .payment-steps li { margin-bottom: 6px; }
+        .note-box {
+            background: #fdf6ea;
+            border: 1px solid #f0e2c0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: #6b5b45;
+            margin-top: 14px;
+            font-family: 'Lato', sans-serif;
+        }
+        .proceed-button {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            background: linear-gradient(135deg, #cfa20c, #b8900a);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media (max-width: 640px) {
+            .donation-form-container { padding: 24px; }
+            .amount-options-simple { grid-template-columns: repeat(3, 1fr); gap:8px; }
+            .amount-option { padding:14px 4px; font-size:1rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+.faqs{background:var(--paper)}
+.faqs .head{text-align:center;max-width:60ch;margin:0 auto}
+.faqs .head h2{margin-top:14px}
+.faqlist{max-width:1060px;margin:30px auto 0}
+.faq{border-bottom:1px solid var(--line)}
+.faq .qbtn{width:100%;text-align:left;padding:17px 4px;display:flex;justify-content:space-between;align-items:center;gap:14px;background:none;border:none;cursor:pointer;font-family: 'Lato', sans-serif;font-size:clamp(1rem,2.4vw,1.14rem);color:var(--maroon);font-weight:500}
+.faq .qicon{width:28px;height:28px;flex:0 0 auto;border-radius:8px;display:grid;place-items:center;background:var(--champagne);color:var(--rust);transition:transform .4s;font-size:1.1rem;line-height:1}
+.faq.open .qicon{transform:rotate(45deg)}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq.open .ans{max-height:360px}
+.faq .ans p{padding:0 4px 18px;font-size:.96rem;line-height:1.6}
+.faq .ans a{color:var(--rust);font-weight:600;text-decoration:underline}
+@media(min-width:860px){.faqlist{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;align-items:start}}
+  .payment-steps ol{list-style:decimal}
+  html, body, .donation-form-container, .donation-form-container *, .faqs, .faqs *, .payment-modal, .payment-modal * { font-family: 'Lato', system-ui, sans-serif !important; }
+  .step-header h2, .donation-value, .amount-option, .faq .qbtn { font-family:'Lato', sans-serif !important; font-weight:700; }
+  .faqs .h-sec { font-family:'Lato', sans-serif !important; font-size:1.875rem !important; }
+  @media (min-width:768px) { .faqs .h-sec { font-size:2.4rem !important; } }
+  .logo-img { filter:none; }
+  #nav { background: linear-gradient(to bottom, rgba(42,23,16,.75), rgba(42,23,16,0)); }
+  #nav.nav-scrolled { background: rgba(42,23,16,.96); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -18px rgba(0,0,0,.6); }
+  #nav nav a { color:#fff; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
+  .footer-art { opacity:.3; -webkit-mask-image:linear-gradient(to right, transparent, #000 30%); mask-image:linear-gradient(to right, transparent, #000 30%); }
+  /* ---- FAQ accordion ---- */
+  .faq2 { background:rgba(255,255,255,.55); border:1px solid #E6D6C3; border-radius:12px; margin-bottom:10px; overflow:hidden; transition: box-shadow .3s, border-color .3s, background .3s; }
+  .faq2:hover { border-color:#DFAB92; background:#fff; }
+  .faq2.open { border-color:#A83E24; background:#fff; box-shadow:0 18px 40px -26px rgba(168,62,36,.35); }
+  .faq2-q { width:100%; display:flex; align-items:center; gap:16px; text-align:left; padding:15px 18px 15px 36px; background:none; border:none; cursor:pointer; color:#3A2118; font-family:'Lato',sans-serif; }
+  .faq2-t { flex:1; font-size:1rem; font-weight:500; line-height:1.35; transition:color .3s; }
+  .faq2.open .faq2-t { color:#A83E24; font-weight:700; }
+  .faq2-icon { width:24px; height:24px; flex:0 0 auto; display:flex; align-items:center; justify-content:center; color:#3A2118; transition: transform .4s cubic-bezier(.2,.8,.2,1), color .3s; }
+  .faq2.open .faq2-icon { color:#A83E24; transform: rotate(45deg); }
+  .faq2-a { display:grid; grid-template-rows:0fr; transition: grid-template-rows .45s cubic-bezier(.2,.8,.2,1); }
+  .faq2.open .faq2-a { grid-template-rows:1fr; }
+  .faq2-a-in { overflow:hidden; padding:0 18px 0 36px; color:#4A3A33; font-size:15px; line-height:1.65; opacity:0; transition: opacity .35s .1s, padding .3s; }
+  .faq2.open .faq2-a-in { padding-bottom:18px; opacity:1; }
+  @media (max-width:640px) { .faq2-q { padding:14px 16px; gap:12px; } .faq2-a-in { padding-left:16px; } }
+  .glass { background: rgba(58,33,24,.35); border:1px solid rgba(255,255,255,.22); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); will-change: transform; }
+  @media (hover:none) {
+    .card-hover:hover, .elig-card:hover { transform:none; }
+    .card-hover.is-touch { transform: scale(.985); box-shadow:0 18px 40px -22px rgba(58,33,24,.35); border-color:#DFAB92; transition: transform .2s, box-shadow .2s; }
+    .card-hover.is-touch::before { transform: scaleX(1); }
+    .elig-card.is-touch { transform: scale(.985); }
+    .faq2.is-touch { border-color:#DFAB92; }
+    .card-hover::after { display:none; }
+  }
+  /* ---- Lato everywhere (incl. form controls) ---- */
+  button, input, select, textarea, optgroup { font-family: 'Lato', system-ui, sans-serif; }
+  /* ---- Student testimonial card: vertical (photo on top, panel below) ---- */
+  .scard { position:relative; display:flex; flex-direction:column; padding-left:14px; }
+  .scard::before { content:""; position:absolute; left:0; top:56px; bottom:30px; width:58%; border-radius:28px 28px 28px 78px; background:linear-gradient(165deg,#D2A659,#B9873B); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+  .scard:hover::before { transform:translate(-4px,6px); }
+  .scard-photo { position:relative; z-index:2; width:64%; max-width:230px; aspect-ratio:1/1; margin:0 0 -46px 16px; border-radius:26px 26px 26px 72px; overflow:hidden; border:4px solid #fff; background:#F4E2D6; box-shadow:0 18px 34px -18px rgba(42,23,16,.65); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+  .scard:hover .scard-photo { transform:translateY(-6px); }
+  .scard-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+  .scard-panel { position:relative; z-index:1; flex:1; background:#2A1710; color:#fff; border-radius:24px 68px 24px 24px; padding:68px 22px 28px; text-align:center; box-shadow:0 26px 50px -28px rgba(42,23,16,.8); }
+  .scard-head { display:flex; justify-content:center; }
+  .scard-name { font-weight:700; font-size:1.12rem; line-height:1.25; color:#fff; }
+  .scard-prog { margin-top:5px; font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; line-height:1.4; color:#EBC8B6; }
+  .scard-text { margin-top:16px; font-size:14px; line-height:1.68; color:rgba(255,255,255,.84); }
+  @media (max-width:639px) { .scard-photo { width:56%; } }
+  /* ---- Donor testimonial card: text left, large portrait right ---- */
+  .dcard { container-type:inline-size; display:flex; }
+  .dcard-in { flex:1; display:grid; grid-template-columns:104px 1fr; grid-template-areas:"photo head" "quote quote"; column-gap:18px; row-gap:18px; align-items:center; align-content:start; border-radius:24px; padding:22px 20px 24px; margin:0; }
+  .dcard-head { grid-area:head; min-width:0; display:flex; flex-direction:column; }
+  .dcard-name { font-style:normal; font-weight:700; font-size:1.18rem; line-height:1.25; color:#3A2118; transition:color .3s; }
+  .dcard-in:hover .dcard-name { color:#A83E24; }
+  .dcard-batch { margin-top:5px; font-size:.86rem; font-weight:700; color:#A83E24; line-height:1.35; }
+  .dcard-rule { display:block; width:44px; height:3px; border-radius:3px; margin-top:12px; background:linear-gradient(90deg,#A83E24,#B9873B); }
+  .dcard-quote { grid-area:quote; position:relative; font-size:15.5px; line-height:1.7; color:#4A3A33; }
+  .dcard-quote .quote-mark { display:block; font-size:2.6rem; height:1.4rem; margin-bottom:6px; }
+  .dcard-photo { grid-area:photo; position:relative; align-self:start; margin:0 8px 8px 0; }
+  .dcard-photo::before { content:""; position:absolute; inset:0; transform:translate(8px,8px); border-radius:18px 18px 18px 44px; background:linear-gradient(150deg,#EBC8B6,#DFAB92); transition:transform .45s cubic-bezier(.2,.8,.2,1); }
+  .dcard-in:hover .dcard-photo::before { transform:translate(11px,11px); }
+  .dcard-frame { position:relative; display:flex; align-items:center; justify-content:center; aspect-ratio:4/5; overflow:hidden; border-radius:18px 18px 18px 44px; border:3px solid #fff; background:#F4E2D6; color:#A83E24; font-weight:700; font-size:1.4rem; box-shadow:0 14px 30px -16px rgba(58,33,24,.5); }
+  .dcard-frame:has(img) { color:transparent; }
+  .dcard-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  /* hover: gradient border on all four sides (instead of the top line only) */
+  .dcard-in.card-hover::before { inset:0; height:auto; border-radius:inherit; padding:3px; background:linear-gradient(135deg,#A83E24,#B9873B 50%,#A83E24); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude; transform:none; opacity:0; transition:opacity .4s ease; pointer-events:none; z-index:3; }
+  .dcard-in.card-hover:hover::before, .dcard-in.card-hover.is-touch::before { transform:none; opacity:1; }
+  .dcard-in.card-hover:hover { border-color:transparent; }
+  @container (min-width:540px) {
+    .dcard-in { grid-template-columns:1fr 190px; grid-template-rows:auto 1fr; grid-template-areas:"head photo" "quote photo"; column-gap:30px; row-gap:16px; padding:30px 32px 34px; align-items:start; }
+    .dcard-name { font-size:1.4rem; }
+    .dcard-photo { align-self:center; margin:0 12px 12px 0; }
+    .dcard-photo::before { transform:translate(12px,12px); border-radius:24px 24px 24px 72px; }
+    .dcard-in:hover .dcard-photo::before { transform:translate(16px,16px); }
+    .dcard-frame { border-radius:24px 24px 24px 72px; border-width:4px; }
+  }
+  @container (min-width:640px) { .dcard-in { grid-template-columns:1fr 215px; column-gap:36px; } }
+  /* ---- All CTAs: 12px corner radius ---- */
+  .btn, .btn-next, .btn-prev, .btn-submit, .btn-primary, .btn-outline { border-radius:12px !important; }
+</style>
+<style>
+  .seg-toggle { position:relative; display:inline-grid; grid-template-columns:1fr 1fr; padding:5px; border-radius:999px; background:#fff; border:1px solid #E6D6C3; box-shadow:0 18px 40px -20px rgba(58,33,24,.45); }
+  .seg-toggle .seg-thumb { position:absolute; top:5px; bottom:5px; left:5px; width:calc(50% - 5px); border-radius:999px; background:linear-gradient(135deg,#A83E24,#8F3219); box-shadow:0 10px 22px -10px rgba(168,62,36,.7); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .seg-toggle[data-active="donors"] .seg-thumb { transform: translateX(100%); }
+  .seg-btn { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px 22px; border-radius:999px; font-weight:700; font-size:.95rem; color:#3A2118; white-space:nowrap; transition: color .3s; cursor:pointer; background:none; border:0; }
+  .seg-btn[aria-selected="true"] { color:#fff; }
+  .seg-count { font-size:.72rem; font-weight:900; min-width:24px; padding:2px 7px; border-radius:999px; background:#F4E2D6; color:#A83E24; transition: background .3s, color .3s; }
+  .seg-btn[aria-selected="true"] .seg-count { background:rgba(255,255,255,.22); color:#fff; }
+  .seg-btn:focus-visible { outline:2px solid #B9873B; outline-offset:2px; }
+  .hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .6s ease; }
+  .hero-don, #tHero[data-active="donors"] .hero-rec { opacity:0; }
+  #tHero[data-active="donors"] .hero-don { opacity:1; }
+  .t-panel[hidden] { display:none; }
+  .t-card { background:#fff; border:1px solid #EFE4D6; box-shadow:0 10px 30px -22px rgba(58,33,24,.25); }
+  @media (max-width:420px) { .seg-btn { padding:11px 12px; font-size:.86rem; gap:6px; } }
+  @media (prefers-reduced-motion: reduce) { .seg-toggle .seg-thumb { transition:none; } }
+</style>
+</head>
+<body class="font-sans">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
+  <div class="max-w-[1480px] mx-auto px-5 md:px-10 h-[72px] flex items-center justify-between">
+    <a href="index.html#top" class="flex items-center gap-3 text-white group">
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-12 md:h-[58px] w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/90">
+      <a href="index.html#about" class="nav-link">About the Scholarship</a>
+      <a href="index.html#eligibility" class="nav-link">Eligibility &amp; Selection</a>
+      <a href="index.html#stories" class="nav-link">Stories</a>
+      <a href="index.html#voices" class="nav-link">Voices of Generosity</a>
+      <a href="index.html#faqs" class="nav-link">FAQs</a>
+    </nav>
+    <a href="index.html#donate" class="hidden md:inline-flex btn-primary text-sm font-semibold px-5 py-2.5 rounded-xl text-center">Contribute Now</a>
+    <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-cocoa text-white px-6 py-4 space-y-3 text-sm">
+    <a href="index.html#about" class="block">About the Scholarship</a>
+    <a href="index.html#eligibility" class="block">Eligibility &amp; Selection</a>
+    <a href="index.html#stories" class="block">Stories</a>
+    <a href="index.html#voices" class="block">Voices of Generosity</a>
+    <a href="index.html#faqs" class="block">FAQs</a>
+    <a href="index.html#donate" class="btn-primary w-full py-3 rounded-xl font-semibold mt-2 text-center">Contribute Now</a>
+  </div>
+</header>
+
+
+<!-- ============ PAGE HEADER ============ -->
+<section id="tHero" data-active="recipients" class="relative bg-brick text-white overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 opacity-40 lg:opacity-100 lg:left-auto lg:w-[52%]">
+      <img src="images/campus.jpg" alt="" class="hero-img hero-rec object-[70%_30%]">
+      <img src="images/donors-hero.jpg" alt="" class="hero-img hero-don object-[60%_72%]">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-cocoa-900/70 via-brick/80 to-brick lg:bg-gradient-to-r lg:from-brick lg:via-brick/85 lg:to-brick/25"></div>
+    <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-cocoa-900/60 to-transparent"></div>
+  </div>
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-28 pb-20 md:pt-36 md:pb-24">
+    <a href="index.html" class="reveal inline-flex items-center gap-2 text-sm text-white/85 hover:text-white transition"><span aria-hidden="true">←</span> Alumni Scholarship for Girl Students</a>
+    <h1 class="reveal mt-4 font-display font-bold leading-[1.08] text-[2.3rem] sm:text-5xl md:text-[3.2rem]">Stories &amp; Voices</h1>
+    <p class="reveal mt-4 text-white/90 max-w-xl text-base md:text-[17px] leading-relaxed">The young women whose IIT Kanpur journeys are being strengthened by this scholarship, and the alumni whose generosity makes it possible.</p>
+  </div>
+</section>
+
+<!-- ============ TOGGLE + TESTIMONIALS ============ -->
+<main class="bg-cream-100 pb-16 md:pb-24">
+  <div class="sticky top-[78px] z-30 flex justify-center px-4 -translate-y-1/2 pointer-events-none">
+    <div class="seg-toggle pointer-events-auto" role="tablist" aria-label="Choose testimonials" data-active="recipients" id="segToggle">
+      <span class="seg-thumb" aria-hidden="true"></span>
+      <button type="button" class="seg-btn" role="tab" id="tab-recipients" aria-controls="panel-recipients" aria-selected="true" data-tab="recipients"><span class="hidden sm:inline">Scholarship </span>Recipients <span class="seg-count">20</span></button>
+      <button type="button" class="seg-btn" role="tab" id="tab-donors" aria-controls="panel-donors" aria-selected="false" data-tab="donors" tabindex="-1">Donors <span class="seg-count">17</span></button>
+    </div>
+  </div>
+
+  <section id="panel-recipients" class="t-panel max-w-[1480px] mx-auto px-5 md:px-10 pt-4 md:pt-6" role="tabpanel" aria-labelledby="tab-recipients">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">Stories of Scholarship Recipients</h2>
+    </div>
+    <div class="t-grid mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/arundhuti-roy.jpg" alt="Arundhuti Roy" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Arundhuti Roy</h3><p class="scard-prog">M.Sc. Physics</p></div>
+          </div>
+          <p class="scard-text">The scholarship was of great help in my journey towards pursuing a Ph.D. It helped me cover the flight tickets for joining my doctoral programme. Beyond its monetary value, the support has encouraged me to believe in myself and pursue higher education. Such initiatives inspire young women to follow their academic dreams with confidence and determination.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/gungun.jpg" alt="Gungun Jain" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Gungun Jain</h3><p class="scard-prog">B.Tech. Civil Engineering</p></div>
+          </div>
+          <p class="scard-text">The scholarship brought much-needed financial relief to my family during a difficult period, when managing my educational expenses alongside my brother’s college fees had become challenging. It eased the burden on my father and gave me greater peace of mind to focus on academics and opportunities at IIT Kanpur. I hope to make the most of this support and eventually give back to others.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/johyna-els-thomas.jpg" alt="Johyna Els Thomas" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Johyna Els Thomas</h3><p class="scard-prog">M.Sc. Physics</p></div>
+          </div>
+          <p class="scard-text">The scholarship came at a crucial time when I needed it most. I remember checking my bank balance after paying my semester fees and wondering how I would manage the next month. At times, I had questioned my decision to pursue higher studies. This support reminded me to keep pushing forward, believe in my journey and never settle for less than I aspire to achieve.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/neha.jpg" alt="Neha Biswas" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Neha Biswas</h3><p class="scard-prog">M.Tech. Materials Science</p></div>
+          </div>
+          <p class="scard-text">The scholarship came at a time when I was preparing to begin a new chapter in Germany. It helped me purchase essentials, including winter clothes and groceries, and also allowed me to give some money to my family. Being able to support my parents made me feel truly blessed. This support has given me the confidence and strength to move forward with hope and courage.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/alka-rani-kerketta.jpg" alt="Alka Rani Kerketta" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Alka Rani Kerketta</h3><p class="scard-prog">M.Sc. Mathematics</p></div>
+          </div>
+          <p class="scard-text">The scholarship has provided meaningful support for my academic and research journey. It has helped ease the financial pressure associated with higher education and manage research-related expenses. This support allows me to focus more fully on my academic responsibilities and research goals. I am sincerely grateful for this opportunity, which encourages me to continue developing as a researcher.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/ananya.jpg" alt="Ananya Aggarwal" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Ananya Aggarwal</h3><p class="scard-prog">Master’s Student</p></div>
+          </div>
+          <p class="scard-text">Pursuing a master’s degree comes with both academic and financial responsibilities, and this scholarship has helped ease some of that burden. It has allowed me to focus more comfortably on my studies without constantly worrying about finances. Being selected also feels like recognition of my hard work and has given me confidence that my efforts are moving in the right direction.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/anjali-kumari.jpg" alt="Anjali Kumari" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Anjali Kumari</h3><p class="scard-prog">Chemical Engineering</p></div>
+          </div>
+          <p class="scard-text">Coming from a family with limited financial resources, this scholarship has been a valuable source of support. It can help me access the books, resources and electronic devices I need for my studies. Knowing that my educational expenses are supported also reduces everyday anxiety, allowing me to focus more fully on academics, projects and personal development.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/bhavana.jpg" alt="Bhavna Panwar" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Bhavna Panwar</h3><p class="scard-prog">IIT Kanpur</p></div>
+          </div>
+          <p class="scard-text">The scholarship has been a great support in my academic journey. It has reduced the financial burden on my family and helped me manage educational expenses while accessing the resources I need for learning. More importantly, receiving this support has motivated me to work harder and perform better academically. It has given me confidence that my efforts are recognised and valued.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/jyoti-bharti.jpg" alt="Jyoti Bharti" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Jyoti Bharti</h3><p class="scard-prog">B.Tech. Materials Science and Engineering</p></div>
+          </div>
+          <p class="scard-text">Receiving this scholarship from the IIT Kanpur Alumni Association has been a great source of encouragement. Beyond easing the financial burden of my undergraduate education, it has given me a strong sense of motivation and responsibility. Knowing that alumni believe in my potential inspires me to develop my technical skills, pursue meaningful projects and eventually give back to the community that supported me.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/mahi.jpg" alt="Mahi" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Mahi</h3><p class="scard-prog">IIT Kanpur</p></div>
+          </div>
+          <p class="scard-text">The scholarship has enabled me to explore opportunities beyond academics without worrying too much about the expenses involved. It gave me the confidence to participate in competitions such as ICPC, which I might otherwise have postponed because of registration and associated costs. This support has encouraged me to take part in more activities, gain new experiences and make the most of my time at IIT Kanpur.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/mangleshwari.jpg" alt="Mangleshwari" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Mangleshwari</h3><p class="scard-prog">IIT Kanpur</p></div>
+          </div>
+          <p class="scard-text">The scholarship has covered a significant part of my semester expenses, including mess fees, bringing considerable relief to my family. Managing the cost of education at IIT Kanpur has often required financial adjustments at home. This support has reduced that burden and allowed me to focus more peacefully on my studies. It has also encouraged me to work harder and make the most of my opportunities.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/parul.jpg" alt="Parul" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Parul</h3><p class="scard-prog">Mathematics and Scientific Computing</p></div>
+          </div>
+          <p class="scard-text">Having taken an education loan to support my studies, managing additional expenses can sometimes be difficult. The scholarship helped me cover travel expenses and my summer term fees, reducing the financial burden on me and my family. It has provided greater financial stability and allowed me to focus more on my studies. I am motivated to work hard and make the best use of the opportunities I receive.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/sakshi-priyam.jpg" alt="Sakshi Priyam" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Sakshi Priyam</h3><p class="scard-prog">Civil Engineering</p></div>
+          </div>
+          <p class="scard-text">The scholarship has been a meaningful support in my journey at IIT Kanpur. It has reduced the financial burden on my family and helped me manage essential educational expenses, including books and academic resources. Knowing that my efforts are recognised and supported has motivated me to work harder. It has given me greater confidence to focus on academics and personal growth without financial worries.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/samiera-r-nair.jpg" alt="Samiera R Nair" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Samiera R Nair</h3><p class="scard-prog">B.Tech. Mechanical Engineering</p></div>
+          </div>
+          <p class="scard-text">The scholarship has provided significant financial relief by reducing my dependence on my parents for hostel expenses, mess fees, electricity bills and other essential needs. It has helped me manage my expenses more independently while easing the burden on my family. With fewer financial constraints, I can focus more effectively on academics, participate in extracurricular activities and make better use of the opportunities available to me.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/sandhya.jpg" alt="Sandhya" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Sandhya</h3><p class="scard-prog">Biological Sciences and Bioengineering</p></div>
+          </div>
+          <p class="scard-text">Coming from a family with limited financial resources, managing tuition fees, hostel expenses, books and other educational costs can be challenging. The scholarship support would ease the financial burden on my family and allow me to focus more on academics and overall development. It would also help me participate in academic and skill-development opportunities with greater confidence and motivate me to make the most of my IIT Kanpur journey.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/santoshi.jpg" alt="Santoshi Sharma" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Santoshi Sharma</h3><p class="scard-prog">IIT Kanpur</p></div>
+          </div>
+          <p class="scard-text">The scholarship has been a great support during my studies at IIT Kanpur. It has helped reduce the financial burden of education and contributed towards academic resources, study materials and other essential expenses. The support has given me greater financial security and allowed me to focus more effectively on my academic work. I am sincerely grateful to the Institute and scholarship committee for their encouragement.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/shruti.jpg" alt="Shruti Kumari" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Shruti Kumari</h3><p class="scard-prog">IIT Kanpur</p></div>
+          </div>
+          <p class="scard-text">The scholarship helped me begin my UPSC preparation, purchase an online course and take my first steps towards my goal. Without this support, I would not have been able to start this journey. The interaction with alumni donors was equally impactful, offering valuable insights into career paths and life. One donor’s encouragement to never hesitate to learn new things has made me more confident and courageous.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/sonia.jpg" alt="Sonia" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Sonia</h3><p class="scard-prog">M.Sc. Physics</p></div>
+          </div>
+          <p class="scard-text">The scholarship has made a meaningful difference to my academic journey. It helped me manage the expenses of higher education and reduced the financial burden associated with continuing my studies. More importantly, it gave me confidence and reassurance that my efforts were being supported and valued. The encouragement has motivated me to continue working sincerely towards my academic goals and aspirations in science.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/trishya.jpg" alt="Trishya Choudhary" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Trishya Choudhary</h3><p class="scard-prog">Economics</p></div>
+          </div>
+          <p class="scard-text">The scholarship has had a significant impact on me, both financially and emotionally. Earlier, I had to borrow money from my maternal uncle to pay my college fees. Receiving this support allowed me to return that money, bringing immense relief to my family. It has also given me a sense of security and confidence, allowing me to focus on my studies and personal growth with greater peace of mind and dignity.</p>
+        </div>
+      </article>
+      <article class="scard ">
+        <div class="scard-photo"><img src="images/recipients/varnika.jpg" alt="Varnika Dewan" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="scard-panel">
+          <div class="scard-head">
+            <div class="min-w-0"><h3 class="scard-name">Varnika Dewan</h3><p class="scard-prog">M.Sc. Chemistry</p></div>
+          </div>
+          <p class="scard-text">The scholarship has given me greater financial independence during my M.Sc. and allowed me to manage academic expenses with greater ease. Beyond the financial support, it carries a strong sense of encouragement and recognition. Knowing that alumni are investing in the aspirations of women scholars motivates me to pursue my academic and research goals with confidence. I hope to carry this spirit of support forward in my career.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="panel-donors" class="t-panel max-w-[1480px] mx-auto px-5 md:px-10 pt-4 md:pt-6" role="tabpanel" aria-labelledby="tab-donors" hidden>
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="font-display text-3xl md:text-[2.4rem] font-bold text-cocoa leading-tight">Voices of Generosity</h2>
+    </div>
+    <div class="t-grid mt-10 grid lg:grid-cols-2 gap-6 lg:gap-7">
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Hari Hariharan (V. Hariharasubramanian)</cite>
+            <span class="dcard-batch">Ph.D. | CHM | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">In 1969 I had to take a bank loan for my living expenses to complete my M.Sc in IITK. So, helping deserving students is very dear to my heart. My wish is that no deserving student should ever reject IITK for financial reasons. If other alumni who have made it in USA can join me, my wish can be fulfilled.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">HH<img src="images/donors/hari-hariharan.jpg" alt="Hari Hariharan (V. Hariharasubramanian)" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Geetha Krishnamurthy</cite>
+            <span class="dcard-batch">Ph.D. | HSS | 1986</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">At IITK, I taught special English classes for students who came from villages and poor families and weren’t exposed to English, the medium of instruction at the institute. What was striking for me was that there wasn’t a single girl student in those classes. I realized that girls didn’t make it that far. Scholarships like this help fix that problem.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">GK<img src="images/donors/geetha-krishnamurthy.jpg" alt="Geetha Krishnamurthy" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Farooq Ahmed Khan</cite>
+            <span class="dcard-batch">M.Sc. (Integrated) | CHM | 1985</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">When I attended IITK during 1985-90, my four siblings were also attending schools/college. A scholarship from Andhra Pradesh covered about 40% of my expenses. My parents borrowed the rest.</p><p class="mt-3">As proud parents of two accomplished daughters, my wife and I are thrilled to contribute to this fund to support the current generation of young women students at IITK.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">FA<img src="images/donors/farooq-ahmed-khan.jpg" alt="Farooq Ahmed Khan" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Varun Mishra</cite>
+            <span class="dcard-batch">B.Tech.–M.Tech. (Dual) | CSE | 2011</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Our society will prosper only when its women receive equal care and opportunities to grow in every walk of life.</p><p class="mt-3">Contributing to this scholarship is my way of showing gratitude to all the wonderful women in my life—my Maa, wife, sisters, and two lovely daughters. They truly make me a better version of myself.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">VM<img src="images/donors/varun-mishra.jpg" alt="Varun Mishra" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Jawaharlal Prasad</cite>
+            <span class="dcard-batch">B.Tech. | CHE | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">During my undergraduate years, I saw students stressed out due to financial obligations that education placed on their parents. I also noticed the low number of female students. My contribution will enable the student to focus on her studies and goals. Her success will go a long way in establishing a capable and equitable society.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">JP<img src="images/donors/jawaharlal-prasad.jpg" alt="Jawaharlal Prasad" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Kajoli Banerjee Krishnan</cite>
+            <span class="dcard-batch">Ph.D., M.Sc. | PHY | 1985, 1989</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Grateful to my alma mater for enabling me to support women in pursuit of a STEM education. Wish them the courage and the perseverance to follow their dreams.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">KB<img src="images/donors/kajoli-banerjee-krishnan.jpg" alt="Kajoli Banerjee Krishnan" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Dr. Jayshree Chakraborty</cite>
+            <span class="dcard-batch">Ph.D. | HSS | 1987</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">I feel fortunate being part of a group to support young, bright, energetic minds who aim at accomplishing with harmony and peace to build a bright, powerful and strong nation.</p><p class="mt-3">May our nation, alma mater and family always be the source of inspiration in life.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">JC<img src="images/donors/jayshree-chakraborty.jpg" alt="Dr. Jayshree Chakraborty" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Monika</cite>
+            <span class="dcard-batch">Ph.D. | CHM | 2022</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">When I was at IIT Kanpur, I never once worried about whether I belonged. I want every girl who walks through those gates to feel that same confidence—no matter the odds she’s up against. ASGS isn’t just a scholarship; it’s a promise that talent, not circumstance, decides who gets to dream big.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">M<img src="images/donors/monika.jpg" alt="Monika" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Kishor Jhalaria</cite>
+            <span class="dcard-batch">B.Tech. | CHE | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Providing scholarships to girl students in STEM is vital to dismantling systemic financial barriers and bridging the gender gap in technical fields. These scholarships empower women to pursue rigorous education, drive diverse perspectives in research and technological innovation, and foster economic independence. Investing in female STEM scholars ultimately creates visible role models, accelerating progress toward an inclusive and equitable workforce.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">KJ<img src="images/donors/kishor-jhalaria.jpg" alt="Kishor Jhalaria" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Renu Khanna</cite>
+            <span class="dcard-batch">Ph.D. | HSS | 1980</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">I am honoured to contribute to the Girls’ Scholarship (ASGS) at IIT Kanpur, my alma mater. This institution empowered me to dream big, and giving back is my way of expressing gratitude. I believe educating a girl empowers a generation. I hope this contribution helps deserving students pursue their dreams and inspires others to support this meaningful cause.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">RK<img src="images/donors/renu-khanna.jpg" alt="Renu Khanna" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Rajiv Roy</cite>
+            <span class="dcard-batch">B.Tech. | EE | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">I am privileged to be able to contribute to the Alumni Girl Students Scholarship. It is an opportunity to make a meaningful change in a young girl’s life. It does not matter which part of the world, young women bear a disproportionate burden of responsibility in a family. This scholarship could empower girls to face that future with confidence.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">RR<img src="images/donors/rajiv-roy.jpg" alt="Rajiv Roy" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Ved Mitra Arya</cite>
+            <span class="dcard-batch">B.Tech. | AE | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">India stands 131st out of 145 countries in Global Gender Gap Index 2026. In higher education, particularly in technical education such as at an IIT, we are far from our goal, even as we are reaching near parity in school education. It was my pleasure and honour to do my bit in supporting girls at IITK.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">VM<img src="images/donors/ved-mitra-arya.jpg" alt="Ved Mitra Arya" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Dr. Aparna Dar</cite>
+            <span class="dcard-batch">M.Sc. (Integrated) | MTH | 1980</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Firstly, I am very grateful to IIT Kanpur for initiating this wonderful ASGS scholarship for meritorious girl students. Secondly, having taught many excellent girl students in my 30 years teaching services at IIT Kanpur, I strongly feel the ASGS scholarship will provide talented girl students with some extra support which will surely help them and which they richly deserve.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">AD<img src="images/donors/aparna-dar.jpg" alt="Dr. Aparna Dar" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Ashok Juneja</cite>
+            <span class="dcard-batch">B.Tech. | EE | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">It gives me immense satisfaction that we as Alumni are able to encourage needy Girl students to achieve their dreams of an IIT Education. They have reached this level after a lot of effort in a society which does not encourage girls to study beyond a certain level. I hope many more of us contribute to this cause.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">AJ<img src="images/donors/ashok-juneja.jpg" alt="Ashok Juneja" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Arvind Kumar</cite>
+            <span class="dcard-batch">B.Tech. | MET | 1979</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">I feel happy to support bright girl students from financially weak families of my alma mater. I believe that education at IITK can make them financial independent and self-reliant and thus enable them to overcome the social and cultural restraints that women have faced in our society for generations.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">AK<img src="images/donors/arvind-kumar.jpg" alt="Arvind Kumar" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Dr. Sanjeev Sharma</cite>
+            <span class="dcard-batch">Ph.D. | HSS | 1984</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">“There is no tool for development more effective than the education of girls.” (Kofi Annan)</p><p class="mt-3">IIT Kanpur shaped my life, and I support ASGS so talented girls can pursue their dreams with less worry. This scholarship is belief in a young woman’s potential, and a small way to repay a debt I can never fully clear.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">SS<img src="images/donors/sanjeev-sharma.jpg" alt="Dr. Sanjeev Sharma" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+      <div class="dcard">
+        <blockquote class="dcard-in card-hover t-card border text-ink">
+          <footer class="dcard-head">
+            <cite class="dcard-name">Amrita Tripathi Sheikh</cite>
+            <span class="dcard-batch">Ph.D., M.Sc. | CHM | 1984, 1978</span>
+            <span class="dcard-rule" aria-hidden="true"></span>
+          </footer>
+          <div class="dcard-quote"><span class="quote-mark" aria-hidden="true">&ldquo;</span><p class="">Meeting the 2025-26 Awardees and some contributors online was a true celebration of the impact of our collective efforts to give back to our Alma Mater. Our sincere thanks to the Director IIT Kanpur, Teams DoRA, IITKDF and SSPC for their constant administrative support to this new initiative. We look forward to the family of contributors increasing. Regards.</p></div>
+          <div class="dcard-photo"><span class="dcard-frame">AT<img src="images/donors/amrita-tripathi-sheikh.jpg" alt="Amrita Tripathi Sheikh" width="480" height="600" loading="lazy" decoding="async" onerror="this.remove()"></span></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ CTA BAND ============ -->
+<section class="relative overflow-hidden bg-[#9E3E27] text-white">
+  <div class="absolute inset-0"><img src="images/journey.jpg" alt="" class="w-full h-full object-cover object-[12%_center] lg:object-[left_center]" loading="lazy"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-[#9E3E27]/40 via-[#9E3E27]/80 to-[#9E3E27]/90 lg:bg-gradient-to-r lg:from-[#9E3E27]/30 lg:via-[#9E3E27]/80 lg:to-[#9E3E27]/90"></div>
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-36 pb-10 lg:py-12 lg:pl-[28%] flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div class="reveal">
+      <h2 class="font-display text-2xl md:text-3xl font-bold leading-tight drop-shadow">Be Part of Her Journey</h2>
+      <p class="mt-3 text-[15px] leading-relaxed max-w-xl">As alumni across batches come together, this initiative can reach more deserving girl students and create a lasting legacy of opportunity at IIT Kanpur.</p>
+    </div>
+    <a href="index.html#donate" class="reveal shrink-0 self-start md:self-auto inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-brick font-bold hover:bg-cream-100 transition">Contribute Now <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-cocoa-900 text-white/80 relative overflow-hidden">
+  <img src="images/footer-art.png" alt="" aria-hidden="true" class="footer-art absolute right-0 bottom-0 w-[46%] max-w-[700px] pointer-events-none select-none hidden md:block">
+  <div class="relative max-w-[1480px] mx-auto px-5 md:px-10 pt-12 pb-16 md:pt-14 md:pb-32 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <img src="images/logo-gtu-white.png" alt="IIT Kanpur | Greater Than Us" width="362" height="164" class="logo-img h-[72px] w-auto">
+      <p class="mt-4 max-w-xs leading-relaxed">Office of the Dean of Resources &amp; Alumni (DoRA), Indian Institute of Technology Kanpur, Kanpur &ndash; 208016, Uttar Pradesh, India.</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Quick links</p>
+      <ul class="space-y-2">
+        <li><a href="index.html#about" class="hover:text-white">About the Scholarship</a></li>
+        <li><a href="index.html#eligibility" class="hover:text-white">Eligibility &amp; Selection</a></li>
+        <li><a href="testimonials.html" class="hover:text-white">Stories &amp; Voices</a></li>
+        <li><a href="index.html#donate" class="hover:text-white">Donate</a></li>
+        <li><a href="index.html#faqs" class="hover:text-white">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Contact</p>
+      <ul class="space-y-2">
+        <li><a href="mailto:dora_desk@iitk.ac.in" class="hover:text-white">dora_desk@iitk.ac.in</a></li>
+        <li>+91 512 679 7289</li>
+        <li><a href="https://iitk.ac.in/dora/" target="_blank" rel="noopener" class="hover:text-white">iitk.ac.in/dora</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 text-center text-xs py-5">&copy; 2026 Indian Institute of Technology Kanpur. All rights reserved.</div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- NAV ---------- */
+const nav = document.getElementById('nav');
+const setNav = () => nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+setNav(); window.addEventListener('scroll', setNav, {passive:true});
+document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
+
+/* ---------- REVEALS ---------- */
+gsap.utils.toArray('.reveal').forEach(el => {
+  if (reduce) { el.style.opacity = 1; return; }
+  gsap.fromTo(el, {y:24, opacity:0}, {y:0, opacity:1, duration:.8, ease:'power3.out', clearProps:'transform', scrollTrigger:{trigger:el, start:'top 92%', once:true}});
+});
+
+/* ---------- TOGGLE: recipients / donors ---------- */
+const seg = document.getElementById('segToggle');
+const tabs = [...seg.querySelectorAll('[data-tab]')];
+const panels = {recipients: document.getElementById('panel-recipients'), donors: document.getElementById('panel-donors')};
+function show(name, opts = {}) {
+  if (!panels[name]) name = 'recipients';
+  seg.dataset.active = name;
+  document.getElementById('tHero').dataset.active = name;
+  tabs.forEach(t => { const on = t.dataset.tab === name; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+  Object.entries(panels).forEach(([k, p]) => p.hidden = k !== name);
+  if (opts.hash) history.replaceState(null, '', '#' + name);
+  if (opts.scroll) { const top = panels[name].getBoundingClientRect().top + window.scrollY - 150; if (window.scrollY > top) window.scrollTo({top, behavior:'auto'}); }
+  if (!reduce) {
+    const p = panels[name];
+    gsap.fromTo(p.querySelector('.text-center'), {y:16, opacity:0}, {y:0, opacity:1, duration:.5, ease:'power3.out', clearProps:'all'});
+    gsap.fromTo(p.querySelectorAll('.t-grid > *'), {y:30, opacity:0}, {y:0, opacity:1, duration:.55, stagger:.04, ease:'power3.out', clearProps:'transform,opacity', overwrite:true});
+  }
+  ScrollTrigger.refresh();
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => show(t.dataset.tab, {hash:true, scroll:true}));
+  t.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const n = tabs[(i + 1) % tabs.length]; n.focus(); show(n.dataset.tab, {hash:true, scroll:true});
+  });
+});
+const fromHash = () => show(location.hash.replace('#', '') || 'recipients');
+fromHash(); window.addEventListener('hashchange', fromHash);
+
+/* ---------- CARD HOVER (tilt) + touch feedback ---------- */
+if (window.matchMedia('(hover:hover)').matches && !reduce) {
+  document.querySelectorAll('.card-hover').forEach(card => {
+    const rx = gsap.quickTo(card, 'rotationX', {duration:.4, ease:'power3', overwrite:false}), ry = gsap.quickTo(card, 'rotationY', {duration:.4, ease:'power3', overwrite:false});
+    gsap.set(card, {transformPerspective:900});
+    card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); card.style.setProperty('--mx', (e.clientX - r.left)+'px'); card.style.setProperty('--my', (e.clientY - r.top)+'px'); ry(((e.clientX - r.left)/r.width - .5) * 5); rx(-((e.clientY - r.top)/r.height - .5) * 5); });
+    card.addEventListener('mouseleave', () => { rx(0); ry(0); });
+  });
+} else if (!window.matchMedia('(hover:hover)').matches) {
+  document.querySelectorAll('.card-hover').forEach(card => {
+    card.addEventListener('touchstart', () => card.classList.add('is-touch'), {passive:true});
+    ['touchend','touchcancel'].forEach(ev => card.addEventListener(ev, () => setTimeout(() => card.classList.remove('is-touch'), 350), {passive:true}));
+  });
+}
+</script>
+</body>
+</html>
